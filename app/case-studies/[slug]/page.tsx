@@ -1,0 +1,280 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { ArrowRight, ArrowLeft, Menu, X } from "lucide-react"
+import { notFound } from "next/navigation"
+
+interface CaseStudyPageProps {
+  params: {
+    slug: string
+  }
+}
+
+export default function CaseStudyPage({ params }: CaseStudyPageProps) {
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
+  const caseStudies = {
+    knowspace: {
+      title: "Knowspace",
+      subtitle: "AI-Powered Senior Care Monitoring System",
+      description:
+        "Knowspace developed an advanced awareness system for assisted living facilities that helps monitor and protect seniors with cognitive impairments. Their technology combines Bluetooth beacons, gateways, and AI analytics to provide real-time location tracking and behavioral insights without invasive cameras.",
+      challenge:
+        "Knowspace needed to navigate the complex technical landscape of developing their real-time monitoring platform that processes millions of data points from IoT devices. They faced challenges in selecting appropriate technologies for their data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. Additionally, they needed guidance on hardware options, system architecture optimization, and implementing practical machine learning approaches for behavior recognition and fall detection.",
+      solution:
+        "The Talent Lab provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
+      results: [
+        "Accelerated development timeline by avoiding costly experimentation with inappropriate technologies",
+        "Reduced EMQX deployment complexity by 50% and costs by 90%",
+        "Gained confidence in technical decisions through expert validation of their approach to indoor positioning",
+        "Developed a scalable architecture capable of handling anticipated growth while maintaining critical 10-second system response time KPI for emergency events",
+      ],
+      testimonial: {
+        quote:
+          "The Talent Lab helped us navigate the complex technical landscape of IoT and AI, saving us months of trial and error. Their structured approach to technology selection and architecture design was invaluable in helping us build a scalable, reliable system that meets our critical performance requirements.",
+        author: "Jack Burden, Founder and CEO, Knowspace",
+      },
+      services: ["AI Opportunity Assessment (free)", "AI Evaluation", "AI Roadmap", "AI Pilot"],
+      technologies: [
+        "Bluetooth Low Energy (BLE)",
+        "MQTT",
+        "Kafka Stream Processing",
+        "Data Cleaning and Device Positioning",
+        "AI for Pattern Recognition",
+      ],
+    },
+  }
+
+  const caseStudy = caseStudies[params.slug as keyof typeof caseStudies]
+
+  if (!caseStudy) {
+    notFound()
+  }
+
+  return (
+    <div className="min-h-screen bg-white text-black font-mono">
+      {/* Header */}
+      <header className="border-b border-black relative z-20">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold">
+            WE ARE FUTUREPROOF
+          </Link>
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/services" className="hover:underline">
+              SERVICES
+            </Link>
+            <Link href="/case-studies" className="hover:underline">
+              CASE STUDIES
+            </Link>
+          </nav>
+          <button className="md:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-black z-10">
+            <div className="container mx-auto px-4 py-4">
+              <nav className="flex flex-col space-y-4">
+                <Link
+                  href="/services"
+                  className="py-2 hover:underline font-bold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  SERVICES
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="py-2 hover:underline font-bold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  CASE STUDIES
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Breadcrumb */}
+      <div className="border-b border-black bg-gray-100">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center space-x-2 text-sm">
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/case-studies" className="hover:underline">
+              Case Studies
+            </Link>
+            <span>/</span>
+            <span className="font-bold">{caseStudy.title}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Case Study Content */}
+      <section>
+        <div className="container mx-auto px-4 py-12">
+          <Link href="/case-studies" className="inline-flex items-center mb-8 hover:underline">
+            <ArrowLeft className="mr-2 h-4 w-4" /> BACK TO CASE STUDIES
+          </Link>
+
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div className="md:col-span-2">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">{caseStudy.title}</h1>
+              <h2 className="text-2xl mb-8">{caseStudy.subtitle}</h2>
+
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
+                alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
+                className="w-full h-64 md:h-96 object-cover mb-8 border border-black"
+              />
+
+              <p className="text-xl mb-8">{caseStudy.description}</p>
+
+              <h3 className="text-2xl font-bold mb-4">THE CHALLENGE</h3>
+              <p className="mb-8">{caseStudy.challenge}</p>
+
+              <h3 className="text-2xl font-bold mb-4">OUR SOLUTION</h3>
+              <p className="mb-8">{caseStudy.solution}</p>
+
+              <h3 className="text-2xl font-bold mb-4">RESULTS</h3>
+              <ul className="space-y-4 mb-8">
+                {caseStudy.results.map((result, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="font-bold mr-4">•</span>
+                    <p>{result}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="border-l-4 border-black pl-6 py-4 mb-8 bg-gray-100">
+                <p className="text-xl italic mb-4">"{caseStudy.testimonial.quote}"</p>
+                <p className="font-bold">— {caseStudy.testimonial.author}</p>
+              </div>
+            </div>
+
+            <div>
+              <div className="bg-gray-100 p-8 border border-black mb-8">
+                <h3 className="text-xl font-bold mb-4">SERVICES USED</h3>
+                <ul className="space-y-2">
+                  {caseStudy.services.map((service, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="font-bold mr-4">•</span>
+                      <p>{service}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gray-100 p-8 border border-black">
+                <h3 className="text-xl font-bold mb-4">TECHNOLOGIES</h3>
+                <ul className="space-y-2">
+                  {caseStudy.technologies.map((tech, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="font-bold mr-4">•</span>
+                      <p>{tech}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="border-b border-black">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">READY TO MAKE SOME MOVES?</h2>
+            <p className="text-xl mb-12">
+              Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
+              advisory services can help you navigate the complex AI landscape.
+            </p>
+            <Link
+              href="https://cal.com/amgando/free-strategy-call"
+              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+            >
+              SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-b border-black bg-black text-white">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">FUTUREPROOF</h3>
+              <p>AI strategy for business performance.</p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">SERVICES</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/services/ai-opportunity-assessment" className="hover:underline">
+                    Opportunity
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/ai-readiness-assessment" className="hover:underline">
+                    Readiness
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/ai-implementation-roadmap" className="hover:underline">
+                    Roadmap
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/ai-vendor-evaluation" className="hover:underline">
+                    Evaluation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/phased-ai-pilot-execution" className="hover:underline">
+                    Pilot
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/ai-education-simplification" className="hover:underline">
+                    Education
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">CASE STUDIES</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/case-studies" className="hover:underline">
+                    All Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/case-studies/knowspace" className="hover:underline">
+                    Knowspace
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
+            <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
