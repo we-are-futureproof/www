@@ -1,14 +1,16 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft, Menu, X } from "lucide-react"
 import { notFound } from "next/navigation"
+import Footer from "../../../components/Footer"
+import Button from "../../../components/Button"
 
 interface CaseStudyPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default function CaseStudyPage({ params }: CaseStudyPageProps) {
@@ -28,7 +30,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       challenge:
         "Knowspace needed to navigate the complex technical landscape of developing their real-time monitoring platform that processes millions of data points from IoT devices. They faced challenges in selecting appropriate technologies for their data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. Additionally, they needed guidance on hardware options, system architecture optimization, and implementing practical machine learning approaches for behavior recognition and fall detection.",
       solution:
-        "The Talent Lab provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
+        "Futureproof provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
       results: [
         "Accelerated development timeline by avoiding costly experimentation with inappropriate technologies",
         "Reduced EMQX deployment complexity by 50% and costs by 90%",
@@ -37,7 +39,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       ],
       testimonial: {
         quote:
-          "The Talent Lab helped us navigate the complex technical landscape of IoT and AI, saving us months of trial and error. Their structured approach to technology selection and architecture design was invaluable in helping us build a scalable, reliable system that meets our critical performance requirements.",
+          "Futureproof helped us navigate the complex technical landscape of IoT and AI, saving us months of trial and error. Their structured approach to technology selection and architecture design was invaluable in helping us build a scalable, reliable system that meets our critical performance requirements.",
         author: "Jack Burden, Founder and CEO, Knowspace",
       },
       services: ["AI Opportunity Assessment (free)", "AI Evaluation", "AI Roadmap", "AI Pilot"],
@@ -51,7 +53,10 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
     },
   }
 
-  const caseStudy = caseStudies[params.slug as keyof typeof caseStudies]
+  // Unwrap params using React.use()
+  const resolvedParams = use(params)
+  const slug = resolvedParams.slug
+  const caseStudy = caseStudies[slug as keyof typeof caseStudies]
 
   if (!caseStudy) {
     notFound()
@@ -200,80 +205,19 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
               advisory services can help you navigate the complex AI landscape.
             </p>
-            <Link
+            <Button
               href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+              variant="primary"
+              size="large"
             >
               SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-b border-black bg-black text-white">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FUTUREPROOF</h3>
-              <p>AI strategy for business performance.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">SERVICES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/services/ai-opportunity-assessment" className="hover:underline">
-                    Opportunity
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-readiness-assessment" className="hover:underline">
-                    Readiness
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-implementation-roadmap" className="hover:underline">
-                    Roadmap
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-vendor-evaluation" className="hover:underline">
-                    Evaluation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/phased-ai-pilot-execution" className="hover:underline">
-                    Pilot
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-education-simplification" className="hover:underline">
-                    Education
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">CASE STUDIES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/case-studies" className="hover:underline">
-                    All Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/case-studies/knowspace" className="hover:underline">
-                    Knowspace
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
-            <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

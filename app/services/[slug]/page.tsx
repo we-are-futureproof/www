@@ -1,14 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft, Menu, X } from "lucide-react"
 import { notFound } from "next/navigation"
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
@@ -154,7 +154,10 @@ export default function ServicePage({ params }: ServicePageProps) {
     },
   }
 
-  const service = services[params.slug as keyof typeof services]
+  // Unwrap params using React.use()
+  const resolvedParams = use(params)
+  const slug = resolvedParams.slug
+  const service = services[slug as keyof typeof services]
 
   if (!service) {
     notFound()
@@ -283,7 +286,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             </p>
             <Link
               href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+              className="inline-flex items-center bg-blue-200 text-black border border-black px-8 py-4 text-lg font-bold transition-colors hover:bg-blue-800 hover:text-white"
             >
               SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
             </Link>

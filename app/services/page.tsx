@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Menu, X } from "lucide-react"
+import Button from "../../components/Button"
+import Footer from "../../components/Footer"
 
 export default function ServicesPage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
@@ -156,12 +158,12 @@ export default function ServicesPage() {
                   <div>
                     <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
                     <p className="text-lg mb-6">{service.description}</p>
-                    <Link
+                    <Button
                       href={service.link}
-                      className="inline-flex items-center bg-black text-white px-6 py-3 font-bold hover:bg-gray-800"
+                      variant="secondary"
                     >
                       LEARN MORE <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    </Button>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-4">BENEFITS</h3>
@@ -190,12 +192,13 @@ export default function ServicesPage() {
               Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
               advisory services can help you navigate the complex AI landscape.
             </p>
-            <Link
+            <Button
               href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+              variant="primary"
+              size="large"
             >
               SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Menu, X } from "lucide-react"
+import Footer from "../../components/Footer"
+import Button from "../../components/Button"
 
 export default function CaseStudiesPage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
@@ -140,14 +142,24 @@ export default function CaseStudiesPage() {
                       </ul>
                     </div>
 
-                    <Link
+                    <Button
                       href={caseStudy.link}
-                      className="inline-flex items-center bg-black text-white px-6 py-3 font-bold hover:bg-gray-800"
+                      variant="secondary"
                     >
                       READ CASE STUDY <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    </Button>
                   </div>
-                  <div className="bg-gray-200 h-64 md:h-auto"></div>
+                  <div className="border-l border-black h-64 md:h-auto">
+                    {caseStudy.id === "knowspace" ? (
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
+                        alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="bg-gray-200 h-full w-full"></div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -164,80 +176,19 @@ export default function CaseStudiesPage() {
               Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
               advisory services can help you navigate the complex AI landscape.
             </p>
-            <Link
+            <Button
               href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+              variant="primary"
+              size="large"
             >
               SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-b border-black bg-black text-white">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FUTUREPROOF</h3>
-              <p>AI strategy for business performance.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">SERVICES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/services/ai-opportunity-assessment" className="hover:underline">
-                    Opportunity
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-readiness-assessment" className="hover:underline">
-                    Readiness
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-implementation-roadmap" className="hover:underline">
-                    Roadmap
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-vendor-evaluation" className="hover:underline">
-                    Evaluation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/phased-ai-pilot-execution" className="hover:underline">
-                    Pilot
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-education-simplification" className="hover:underline">
-                    Education
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">CASE STUDIES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/case-studies" className="hover:underline">
-                    All Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/case-studies/knowspace" className="hover:underline">
-                    Knowspace
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
-            <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

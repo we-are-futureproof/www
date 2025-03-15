@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "The Talent Lab",
+  title: "FUTUREPROOF",
   description: "AI adoption advisory for small and medium businesses",
     generator: 'v0.dev'
 }

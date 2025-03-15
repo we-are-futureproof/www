@@ -1,8 +1,10 @@
 "use client"
 
-import Link from "next/link"
 import { ArrowRight, Menu, X } from "lucide-react"
 import { useState } from "react"
+import Footer from "../components/Footer"
+import Button from "../components/Button"
+import Link from "next/link"
 
 // Color palette
 const colors = [
@@ -19,7 +21,15 @@ const colors = [
 ];
 
 // Helper function to get a random color
-const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
+// Use a specific color for server-side rendering to avoid hydration mismatch
+// For client-side interactions, we'll still use random colors
+const getRandomColor = () => {
+  // This ensures consistent initial render between server and client
+  return "bg-blue-200";
+};
+
+// This function is safe to use in client-side event handlers
+const getRandomColorClientSide = () => colors[Math.floor(Math.random() * colors.length)];
 
 
 export default function HomePage() {
@@ -78,8 +88,8 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="border-b border-black">
-        <div className="container mx-auto px-4 py-20 md:py-32">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div className="container mx-auto px-4 py-20 md:py-20">
+          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
             <div className="w-full md:w-3/5">
               <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
                 AI WILL IMPACT
@@ -89,22 +99,30 @@ export default function HomePage() {
               <p className="text-xl md:text-4xl mb-12 max-w-2xl">
                 How will <span className="font-bold">you</span> take advantage?
               </p>
-              <Link
+              <Button
                 href="https://cal.com/amgando/free-strategy-call"
-                className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+                variant="primary"
+                size="large"
               >
                 WE CAN HELP
                 <ArrowRight className="ml-2" />
-              </Link>
-              <p className={`mt-14 text-xl text-gray-700 py-8 pl-2 ${getRandomColor()}`}>
+              </Button>
+              <p className="mt-4 text-xl text-gray-700 py-8 pl-2">
+                <strong>28 years</strong> building business automation solutions
+                <br />
+                <strong>80 enterprise clients</strong> with 1 in 10 among Fortune 500
+                <br />
+                <strong>15k students</strong> including founders and tech managers 
+              </p>
+              <p className="text-xl text-gray-700 py-4 pl-2">
                 Transform AI confusion into competitive advantage
               </p>
             </div>
-            <div className="w-full md:w-2/5 h-76 md:h-[470px] bg-gray-200 border border-gray-400">
+            <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-IzzEmMlybYFfI7IN91FHUxwe8jQS1S.png"
+                src="/oneline-geopath.png"
                 alt="Minimalist line drawing of two connected location pins - symbolizing guidance and direction"
-                className="w-full h-full object-contain bg-white p-8"
+                className="w-full h-full object-contain bg-white p-8 pt-4"
               />
             </div>
           </div>
@@ -260,23 +278,29 @@ export default function HomePage() {
             ].map((service, index) => (
             <div
               key={index}
-              className="border border-black p-6 cursor-pointer group relative transition-colors duration-1000 ease-out hover:duration-[2000ms] flex flex-col h-full"
+              className="border border-black p-6 cursor-pointer group relative flex flex-col h-full"
               onClick={() => (window.location.href = service.link)}
               onMouseEnter={(e) => {
-                const randomColor = getRandomColor();
+                // Use the client-side version for interactions
+                const randomColor = getRandomColorClientSide();
 
-                // Remove any existing color classes
+                // Remove any existing color classes and transition classes
                 const currentClasses = e.currentTarget.className.split(" ")
-                const newClasses = currentClasses.filter((cls) => !cls.match(/bg-\w+-\d+/))
+                const newClasses = currentClasses.filter((cls) => !cls.match(/bg-\w+-\d+/) && !cls.match(/transition-/))
 
-                // Add the new random color
-                e.currentTarget.className = [...newClasses, randomColor].join(" ")
+                // Add the new random color with fast transition in
+                e.currentTarget.className = [...newClasses, randomColor, "transition-colors", "duration-500", "ease-in"].join(" ")
               }}
               onMouseLeave={(e) => {
-                // When mouse leaves, let the transition classes handle the fade-out
+                // When mouse leaves, set a slow transition out
                 const currentClasses = e.currentTarget.className.split(" ")
-                const newClasses = currentClasses.filter((cls) => !cls.match(/bg-\w+-\d+/))
-                e.currentTarget.className = newClasses.join(" ")
+                // Remove existing transition classes first
+                const baseClasses = currentClasses.filter((cls) => !cls.match(/transition-/) && !cls.match(/duration-/) && !cls.match(/ease-/))
+                // Add slow transition out classes
+                const newClasses = [...baseClasses, "transition-colors", "duration-[5000ms]", "ease-out"]
+                // Remove color classes
+                const finalClasses = newClasses.filter((cls) => !cls.match(/bg-\w+-\d+/))
+                e.currentTarget.className = finalClasses.join(" ")
               }}
             >
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
@@ -288,12 +312,13 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link
+            <Button
               href="/services"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
+              variant="secondary"
+              size="large"
             >
               VIEW ALL SERVICES <ArrowRight className="ml-2" />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -341,7 +366,7 @@ export default function HomePage() {
               </div>
               <div className="border-l border-black h-64 md:h-auto">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
+                  src="/oneline-oldhands.png"
                   alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
                   className="w-full h-full object-cover"
                 />
@@ -360,80 +385,20 @@ export default function HomePage() {
               Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
               advisory services can help you navigate the complex AI landscape.
             </p>
-            <Link
-              href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800"
-            >
-              SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Link>
+            <Button
+                href="https://cal.com/amgando/free-strategy-call"
+                variant="primary"
+                size="large"
+              >
+                SCHEDULE A CONSULTATION
+                <ArrowRight className="ml-2" />
+              </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-b border-black bg-black text-white">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FUTUREPROOF</h3>
-              <p>AI strategy for business performance.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">SERVICES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/services/ai-opportunity-assessment" className="hover:underline">
-                    Opportunity
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-readiness-assessment" className="hover:underline">
-                    Readiness
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-implementation-roadmap" className="hover:underline">
-                    Roadmap
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-vendor-evaluation" className="hover:underline">
-                    Evaluation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/phased-ai-pilot-execution" className="hover:underline">
-                    Pilot
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-education-simplification" className="hover:underline">
-                    Education
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">CASE STUDIES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/case-studies" className="hover:underline">
-                    All Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/case-studies/knowspace" className="hover:underline">
-                    Knowspace
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
-            <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
