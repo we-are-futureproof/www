@@ -81,40 +81,45 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
         </button>
       </div>
       
-      {/* Dots navigation */}
-      <div className="absolute bottom-2 left-0 right-0 flex justify-center z-10 gap-2">
+      {/* No mobile swipe indicators as requested */}
+      
+      {/* Dots navigation - improved for mobile */}
+      <div className="absolute bottom-2 sm:bottom-3 left-0 right-0 flex justify-center z-10 gap-2">
         {quotes.map((_, index) => (
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
             className={cn(
-              "w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all",
-              index === activeIndex ? "bg-orange-400 scale-125" : "bg-gray-300"
+              "w-4 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full transition-all",
+              index === activeIndex ? "bg-orange-400" : "bg-gray-300"
             )}
             aria-label={`Go to quote ${index + 1}`}
           />
         ))}
       </div>
       
-      {/* Quotes container */}
+      {/* Quotes container - improved touch behavior */}
       <div 
         ref={scrollContainerRef}
-        className="flex overflow-x-hidden snap-x snap-mandatory w-full h-full"
+        className="flex overflow-x-hidden snap-x snap-mandatory w-full h-full touch-pan-x"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => setIsPaused(false)}
+        onTouchEnd={() => {
+          // Resume auto-scroll after a delay when touch ends
+          setTimeout(() => setIsPaused(false), 5000);
+        }}
       >
         {quotes.map((quote, index) => (
           <div 
             key={index}
-            className="flex-none w-full h-full snap-center p-3 sm:p-4 md:p-6 flex flex-col justify-center"
+            className="flex-none w-full h-full snap-center p-1 sm:p-2 md:p-5 flex flex-col justify-center"
           >
-            <div className="bg-white border border-gray-200 p-4 sm:p-6 md:p-6 m-4 rounded-sm shadow-sm h-full flex flex-col">
-              <div className="text-gray-700 italic flex-grow text-sm sm:text-base">
+            <div className="bg-white border border-gray-200 m-4 p-2 sm:p-4 md:p-6 rounded-sm shadow-sm h-auto sm:h-full flex flex-col max-h-full">
+              <div className="text-gray-700 italic flex-grow text-sm sm:text-base overflow-hidden">
                 {
                   getQuoteParagraphs(quote).map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex} className="mb-3 md:mb-4">
+                    <p key={paragraphIndex} className="mb-1.5 sm:mb-2 md:mb-4">
                       {paragraph.segments.map((segment: QuoteSegment, segmentIndex: number) => (
                         <span 
                           key={segmentIndex}
@@ -129,9 +134,9 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
                   ))
                 }
               </div>
-              <div className="mt-3 md:mt-4">
-                <p className="font-bold text-sm md:text-base">{quote.author}</p>
-                <p className="text-gray-600 text-xs md:text-sm">{quote.company}</p>
+              <div className="mt-2 sm:mt-3 md:mt-4">
+                <p className="font-bold text-sm sm:text-base">{quote.author}</p>
+                <p className="text-gray-600 text-xs sm:text-sm">{quote.company}</p>
               </div>
             </div>
           </div>

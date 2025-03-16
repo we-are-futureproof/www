@@ -41,7 +41,7 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Technical Translation",
-    "quote": "Futureproof excels at demystifying complex AI concepts, making them accessible to our entire team.\n\nThey didn't just propose solutions; they equipped us with analytical frameworks to independently evaluate AI opportunities.\n\nOur technical support enhancement project moved swiftly from concept to implementation after just two strategic sessions.",
+    "quote": "Futureproof excels at demystifying complex AI concepts, making them accessible to our entire team.\n\nThey didn't just propose solutions; they equipped us with analytical frameworks to independently evaluate AI opportunities.\n\nOur technical support project moved from concept to implementation after just two strategic sessions.",
     "paragraphs": [
       { 
         "segments": [
@@ -57,7 +57,7 @@ export const quotes: Quote[] = [
       },
       { 
         "segments": [
-          { "text": "Our technical support enhancement project moved swiftly from concept to implementation after just two strategic sessions." }
+          { "text": "Our technical support project moved from concept to implementation after just two strategic sessions." }
         ]
       }
     ],
@@ -66,23 +66,23 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Making Sense of AI",
-    "quote": "Before engaging Futureproof, AI complexity had stalled our progress.\n\nTheir systematic approach provided both the technical knowledge and strategic confidence needed to advance our document automation project.\n\nFutureproof fosters an environment where both technical and non-technical stakeholders can contribute effectively.",
+    "quote": "Before Futureproof, AI complexity had stalled our progress.\n\nTheir systematic approach provided both the technical knowledge and strategic confidence needed to tackle document automation.\n\nFutureproof fosters an environment where both technical and non-technical stakeholders can contribute.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Before engaging Futureproof, AI complexity had stalled our progress. " },
+          { "text": "Before Futureproof, AI complexity had stalled our progress. " },
         ]
       },
       { 
         "segments": [
           { "text": "Their "},
           { "text": " systematic approach provided both the technical knowledge and strategic confidence ", "highlight": true },
-          { "text": " needed to advance our document automation project. " },
+          { "text": " needed to tackle document automation. " },
         ]
       },
       { 
         "segments": [
-          { "text": "Futureproof fosters an environment where both technical and non-technical stakeholders can contribute effectively. " },
+          { "text": "Futureproof fosters an environment where both technical and non-technical stakeholders can contribute. " },
         ]
       }
     ],
@@ -91,16 +91,16 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Problem Decomposition",
-    "quote": "Futureproof excels at breaking down complex AI projects into manageable components.\n\nWhen our sales training initiative stalled due to scope complexity, their structured methodology helped us identify immediate opportunities while aligning with strategic objectives.\n\nThey provided a comprehensive framework for AI adoption, beyond just implementation tactics.",
+    "quote": "Futureproof breaks AI complexity into actionable steps.\n\nWhen our sales training stalled due to scope complexity, their approach helped us identify immediate opportunities while aligning with strategic objectives.\n\nThey provided a comprehensive framework for AI adoption, beyond just implementation tactics.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof excels at breaking down complex AI projects into manageable components. " },
+          { "text": "Futureproof breaks AI complexity into actionable steps. " },
         ]
       },
       { 
         "segments": [
-          { "text": "When our sales training initiative stalled due to scope complexity, their structured methodologyhelped us identify immediate opportunities while aligning with strategic objectives." },
+          { "text": "When our sales training stalled due to scope complexity, their approach helped us identify immediate opportunities while aligning with objectives." },
         ]
       },
       { 
@@ -116,7 +116,7 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Team Support",
-    "quote": "We valued Futureproof's focus on capability development rather than creating dependency.\n\nThey equipped our team with robust frameworks to independently evaluate and implement AI solutions.\n\nTheir collaborative methodology during our GIS visualization project effectively transferred knowledge and built internal competency.",
+    "quote": "We valued Futureproof's focus on capability development rather than creating dependency.\n\nThey equipped our team with robust frameworks to independently evaluate and implement AI.\n\nTheir collaborative approach during our GIS visualization project helped us transfer knowledge and build competency.",
     "paragraphs": [
       { 
         "segments": [
@@ -127,12 +127,12 @@ export const quotes: Quote[] = [
         "segments": [
           { "text": "They equipped our team with " },
           { "text": " robust frameworks ", "highlight": true },
-          { "text": " to independently evaluate and implement AI solutions. " }
+          { "text": " to independently evaluate and implement AI. " }
         ]
       },
       { 
         "segments": [
-          { "text": "Their collaborative methodology during our GIS visualization project effectively transferred knowledge and built internal competency. " }
+          { "text": "Their collaborative approach during our GIS visualization project helped us transfer knowledge and build competency. " }
         ]
       }
     ],
@@ -141,12 +141,12 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Practical Perspective",
-    "quote": "Futureproof stands out by focusing on practical implementation over theoretical capabilities.\n\nThey helped us prioritize use cases for our customer support system based on quantifiable business value, not just technological novelty.\n\nTheir methodical approach transformed uncertainty into productive implementation momentum.",
+    "quote": "Futureproof stands out by focusing on practicality over theory.\n\nThey helped us prioritize use cases for our customer support system based on quantifiable business value, not just technological novelty.\n\nTheir methodical approach transformed uncertainty into productive implementation momentum.",
     "paragraphs": [
       { 
         "segments": [
           { "text": "Futureproof "},
-          { "text": " stands out by focusing on practical implementation over theoretical capabilities. " },
+          { "text": " stands out by focusing on practicality over theory. " },
         ]
       },
       { 
@@ -167,7 +167,7 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Balanced Guidance",
-    "quote": "Futureproof provided an optimal balance of expert guidance and organizational autonomy as we explored AI applications for document processing workflows.\n\nThey established a productive environment for exploration and inquiry.\n\nWithin weeks, we moved from strategic uncertainty to a defined implementation roadmap.",
+    "quote": "Futureproof provided an optimal balance of expert guidance and organizational autonomy as we explored AI applications for document processing workflows.\n\nThey established a productive environment for exploration and inquiry.\n\nWithin weeks, we moved from uncertainty to a implementation.",
     "paragraphs": [
       { 
         "segments": [
@@ -183,7 +183,7 @@ export const quotes: Quote[] = [
       },
       { 
         "segments": [
-          { "text": "Within weeks, we moved from strategic uncertainty to a defined implementation roadmap. " },
+          { "text": "Within weeks, we moved from uncertainty to a implementation. " },
         ]
       }
     ],
@@ -217,11 +217,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Learning Acceleration",
-    "quote": "Futureproof's methodology significantly accelerated our AI adoption timeline.\n\nOur team now employs a structured process for evaluating and prioritizing AI opportunities.\n\nTheir expert guidance and strategic problem-solving during our sales training automation project established the foundation for independent advancement.",
+    "quote": "Futureproof's methodology accelerated our AI adoption.\n\nOur team now employs a structured process for evaluating and prioritizing AI opportunities.\n\nTheir expert guidance and strategic problem-solving during our sales training automation project established the foundation for independent advancement.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof's methodology significantly accelerated our AI adoption timeline. " },
+          { "text": "Futureproof's methodology accelerated our AI adoption. " },
         ]
       },
       { 
@@ -242,7 +242,7 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Collaborative Discovery",
-    "quote": "The primary value of Futureproof's consultation extended beyond technical expertise to their structured discovery methodology.\n\nThey demonstrated that our GIS visualization challenge required refining decision processes rather than merely technological implementation.\n\nTheir analytical approach transformed our organizational approach to technology adoption.",
+    "quote": "The primary value of Futureproof's consultation extended beyond technical expertise to their structured discovery methodology.\n\nThey demonstrated that our GIS visualization challenge required refining decision processes rather than technological implementation.\n\nTheir analytical approach transformed our organization.",
     "paragraphs": [
       { 
         "segments": [
@@ -252,12 +252,12 @@ export const quotes: Quote[] = [
       },
       { 
         "segments": [
-          { "text": "They demonstrated that our GIS visualization challenge required refining decision processes rather than merely technological implementation." }
+          { "text": "They demonstrated that our GIS visualization challenge required refining decision processes rather than technological implementation." }
         ]
       },
       { 
         "segments": [
-          { "text": "Their analytical approach transformed our organizational approach to technology adoption." }
+          { "text": "Their analytical approach transformed our organization." }
         ]
       }
     ],
