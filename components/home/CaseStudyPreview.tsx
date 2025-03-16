@@ -16,7 +16,7 @@ export default function CaseStudyPreview() {
         </div>
         <div className="border border-black bg-white">
           <div className="grid md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-between">
+            <div className="p-6 md:p-8 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-4">KNOWSPACE</h3>
                 <p className="text-sm md:text-lg mb-6">
