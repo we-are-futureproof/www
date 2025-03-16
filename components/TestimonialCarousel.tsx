@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from 'react';
-import { Quote } from '@/lib/quotes';
+import { Quote, getQuoteParagraphs, QuoteSegment } from '@/lib/quotes';
 import { cn } from '@/lib/utils';
 
 interface TestimonialCarouselProps {
@@ -11,7 +11,7 @@ interface TestimonialCarouselProps {
 
 const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ 
   quotes, 
-  autoScrollInterval = 5000 
+  autoScrollInterval = 8000 
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -62,7 +62,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
             onClick={() => setActiveIndex(index)}
             className={cn(
               "w-2 h-2 rounded-full transition-all",
-              index === activeIndex ? "bg-orange-400 scale-125" : "bg-gray-200"
+              index === activeIndex ? "bg-orange-300 scale-125" : "bg-gray-200"
             )}
             aria-label={`Go to quote ${index + 1}`}
           />
@@ -82,8 +82,19 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
             <div className="bg-white border border-gray-200 p-8 rounded-sm shadow-sm h-full flex flex-col">
               <div className="text-gray-700 italic flex-grow">
                 {
-                  quote.quote.split("\n\n").map((paragraph, i) => (
-                    <p key={i} className="mb-4">{paragraph}</p>
+                  getQuoteParagraphs(quote).map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex} className="mb-4">
+                      {paragraph.segments.map((segment: QuoteSegment, segmentIndex: number) => (
+                        <span 
+                          key={segmentIndex}
+                          className={cn(
+                            segment.highlight ? "bg-orange-200" : ""
+                          )}
+                        >
+                          {segment.text}
+                        </span>
+                      ))}
+                    </p>
                   ))
                 }
               </div>
