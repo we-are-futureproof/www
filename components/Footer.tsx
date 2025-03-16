@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 mb-4 md:mb-0">
             <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">WE ARE FUTUREPROOF</h3>
             <p className="mb-3 md:mb-4 text-sm md:text-base">And you should be too</p>
-            <p className="text-sm md:text-base">AI strategy for business performance.</p>
+            <p className="text-sm md:text-base mt-10 py-3 border-y border-white border-y-[0.5px]">AI strategy for business performance.</p>
           </div>
           <div>
             <h4 className="font-bold mb-3 md:mb-4 text-base md:text-base">SERVICES</h4>
@@ -61,7 +61,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-800 text-xs md:text-sm">
+        <div className="mt-4 md:mt-12 pt-4 md:pt-8 border-t border-gray-800 text-xs md:text-sm">
           <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
         </div>
       </div>
