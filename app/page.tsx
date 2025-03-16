@@ -1,10 +1,12 @@
 "use client"
 
 import { ArrowRight, Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Footer from "../components/Footer"
 import Button from "../components/Button"
 import Link from "next/link"
+import TestimonialCarousel from "../components/TestimonialCarousel"
+import { getQuotesBySection } from "../lib/quotes"
 
 // Color palette
 const colors = [
@@ -35,6 +37,19 @@ const getRandomColorClientSide = () => colors[Math.floor(Math.random() * colors.
 export default function HomePage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showImage, setShowImage] = useState(true)
+  
+  // Get hero quotes
+  const heroQuotes = getQuotesBySection('hero')
+  
+  // Effect to handle the image fade out after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowImage(false)
+    }, 3000) // 3 seconds
+    
+    return () => clearTimeout(timer)
+  }, [])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -97,33 +112,47 @@ export default function HomePage() {
                 to Competitive Advantage
               </h1>
               <p className="text-xl md:text-2xl mb-12 max-w-2xl">
-                Stop feeling overwhelmed.
-                <br />
                 Start seeing results <span className='bg-green-200'>within days</span>.
+                <br />
+                Stop feeling overwhelmed.
               </p>
               <Button
                 href="https://cal.com/amgando/free-strategy-call"
                 variant="primary"
                 size="large"
               >
-                BOOK A STRATEGY CALL (free)
+                BOOK A (free) STRATEGY CALL
                 <ArrowRight className="ml-2" />
               </Button>
               <p className="mt-4 text-xl text-gray-700 py-8 pl-2">
                 <strong>28 years</strong> building automation solutions
                 <br />
                 <strong>80+ enterprise clients</strong> including six of the Fortune 100
+                <br />
+                <strong>4 SMBs</strong> achieved implementation within 3 weeks
               </p>
-              <p className="text-xl text-gray-700 py-8 pl-2">
+              <p className="text-xl text-gray-700 py-4 pl-2">
               AI is transforming your industry now. <br />We can help you turn disruption into your competitive edge.
               </p>
             </div>
-            <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400">
-              <img
-                src="/oneline-geopath.png"
-                alt="Minimalist line drawing of two connected location pins - symbolizing guidance and direction"
-                className="w-full h-full object-contain bg-white p-8 pt-4"
-              />
+            <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400 overflow-hidden relative">
+              {/* Hero testimonial section */}
+              <div className="w-full h-full relative">
+                <div 
+                  className={`absolute inset-0 z-10 transition-opacity duration-1000 bg-white flex items-center justify-center ${showImage ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                >
+                  <img
+                    src="/oneline-geopath.png"
+                    alt="Minimalist line drawing of two connected location pins - symbolizing guidance and direction"
+                    className="w-full h-full object-contain bg-white p-8 pt-4"
+                  />
+                </div>
+                <div 
+                  className={`absolute inset-0 transition-opacity duration-1000 ${showImage ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                >
+                  <TestimonialCarousel quotes={heroQuotes} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
