@@ -59,38 +59,38 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-black font-mono">
       {/* Header */}
       <header className="border-b border-black relative z-20">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold">
+        <div className="container mx-auto px-4 py-4 sm:py-6 flex justify-between items-center">
+          <Link href="/" className="text-xl sm:text-2xl font-bold">
             WE ARE FUTUREPROOF
           </Link>
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/services" className="hover:underline">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+            <Link href="/services" className="hover:underline text-sm lg:text-base">
               SERVICES
             </Link>
-            <Link href="/case-studies" className="hover:underline">
+            <Link href="/case-studies" className="hover:underline text-sm lg:text-base">
               CASE STUDIES
             </Link>
           </nav>
-          <button className="md:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button className="md:hidden p-1" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-black z-10">
-            <div className="container mx-auto px-4 py-4">
-              <nav className="flex flex-col space-y-4">
+            <div className="container mx-auto px-4 py-3">
+              <nav className="flex flex-col space-y-3">
                 <Link
                   href="/services"
-                  className="py-2 hover:underline font-bold"
+                  className="py-2 hover:underline font-bold text-sm sm:text-base"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   SERVICES
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="py-2 hover:underline font-bold"
+                  className="py-2 hover:underline font-bold text-sm sm:text-base"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   CASE STUDIES
@@ -103,38 +103,40 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="border-b border-black">
-        <div className="container mx-auto px-4 py-20 md:py-20">
-          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
+          <div className="flex flex-col md:flex-row items-start gap-6 sm:gap-8 md:gap-12">
             <div className="w-full md:w-3/5">
-              <h1 className="text-3xl md:text-5xl font-thin mb-8 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin mb-4 sm:mb-6 md:mb-8 leading-tight">
                 From AI Complexity
                 <br />
                 <span className="font-sans font-bold tracking-wide text-gray-800">to Competitive Advantage</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-14 max-w-2xl">
+              <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 md:mb-14 max-w-2xl">
                 End the overwhelm. See results <span className='bg-green-200'>within days</span>.
               </p>
               <Button
                 href="https://cal.com/amgando/free-strategy-call"
                 variant="primary"
                 size="large"
-                className="rounded-md"
+                fullWidth={true}
+                className="rounded-md sm:w-auto sm:justify-start"
               >
                 BOOK A (free) STRATEGY CALL
                 <ArrowRight className="ml-2" />
               </Button>
-              <p className="mt-6 text-xl text-gray-700 py-8 pl-2">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
                 <strong>28 years</strong> building automation solutions
-                <br />
+                <br className="md:hidden" /><span className="hidden md:inline"> • </span>
                 <strong>80+ enterprise clients</strong> including six of the Fortune 100
-                <br />
+                <br className="md:hidden" /><span className="hidden md:inline"> • </span>
                 <strong>4 SMBs</strong> achieved implementation within 3 weeks
               </p>
-              <p className="text-xl text-gray-700 py-4 pl-2">
-              AI is already transforming your industry. <br />It's time to take advantage of this disruption.
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 py-2 sm:py-3 md:py-4 pl-0 sm:pl-2">
+                AI is already transforming your industry. <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>It's time to take advantage of this disruption.
               </p>
             </div>
-            <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400 overflow-hidden relative">
+            <div className="w-full md:w-2/5 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
               {/* Hero testimonial section */}
               <div className="w-full h-full relative">
                 <div 
@@ -143,7 +145,7 @@ export default function HomePage() {
                   <img
                     src="/oneline-geopath.png"
                     alt="Minimalist line drawing of two connected location pins - symbolizing guidance and direction"
-                    className="w-full h-full object-contain bg-white p-8 pt-4"
+                    className="w-full h-full object-contain bg-white p-4 sm:p-6 md:p-8 pt-2 sm:pt-3 md:pt-4"
                   />
                 </div>
                 <div 
@@ -159,11 +161,11 @@ export default function HomePage() {
 
       {/* Problem Statement */}
       <section className="border-b border-black bg-gray-100">
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">THE PROBLEM</h2>
-              <ul className="space-y-6 text-lg">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 md:mb-8">THE PROBLEM</h2>
+              <ul className="space-y-4 sm:space-y-5 md:space-y-6 text-base sm:text-lg">
                 {[
                   {
                     number: "01",
@@ -192,12 +194,13 @@ export default function HomePage() {
                     className="flex items-start cursor-pointer border-b border-transparent hover:border-black transition-all duration-100"
                     onMouseEnter={() => setHoveredItem(index)}
                     onMouseLeave={() => setHoveredItem(null)}
+                    onClick={() => setHoveredItem(hoveredItem === index ? null : index)}
                   >
-                    <span className="font-bold mr-4 mb-20">{item.number}</span>
-                    <div>
-                      <span className="font-bold block mb-1">{item.title}</span>
+                    <span className="font-bold mr-3 sm:mr-4 text-sm sm:text-base md:text-lg mb-14 sm:mb-16 md:mb-20">{item.number}</span>
+                    <div className="flex-1">
+                      <span className="font-bold block mb-1 text-sm sm:text-base md:text-lg">{item.title}</span>
                       <span
-                        className={`font-normal text-gray-700 block overflow-hidden transition-all duration-200 ${
+                        className={`font-normal text-gray-700 block overflow-hidden transition-all duration-200 text-sm sm:text-base ${
                           hoveredItem === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                         }`}
                       >
