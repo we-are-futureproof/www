@@ -106,25 +106,24 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-20 md:py-20">
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
             <div className="w-full md:w-3/5">
-              <h1 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+              <h1 className="text-3xl md:text-5xl font-thin mb-8 leading-tight">
                 From AI Complexity
                 <br />
-                to Competitive Advantage
+                <span className="font-sans font-bold tracking-wide text-gray-800">to Competitive Advantage</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-12 max-w-2xl">
-                Start seeing results <span className='bg-green-200'>within days</span>.
-                <br />
-                Stop feeling overwhelmed.
+              <p className="text-xl md:text-2xl mb-14 max-w-2xl">
+                End the overwhelm. See results <span className='bg-green-200'>within days</span>.
               </p>
               <Button
                 href="https://cal.com/amgando/free-strategy-call"
                 variant="primary"
                 size="large"
+                className="rounded-md"
               >
                 BOOK A (free) STRATEGY CALL
                 <ArrowRight className="ml-2" />
               </Button>
-              <p className="mt-4 text-xl text-gray-700 py-8 pl-2">
+              <p className="mt-6 text-xl text-gray-700 py-8 pl-2">
                 <strong>28 years</strong> building automation solutions
                 <br />
                 <strong>80+ enterprise clients</strong> including six of the Fortune 100
@@ -132,7 +131,7 @@ export default function HomePage() {
                 <strong>4 SMBs</strong> achieved implementation within 3 weeks
               </p>
               <p className="text-xl text-gray-700 py-4 pl-2">
-              AI is transforming your industry now. <br />We can help you turn disruption into your competitive edge.
+              AI is already transforming your industry. <br />It's time to take advantage of this disruption.
               </p>
             </div>
             <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400 overflow-hidden relative">

@@ -50,6 +50,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
   // If no quotes, return nothing
   if (!quotes.length) return null;
 
+
+
   return (
     <div className="w-full h-full relative overflow-hidden pb-4">
       {/* Dots navigation */}

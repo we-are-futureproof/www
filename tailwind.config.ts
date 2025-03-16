@@ -10,6 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: "var(--font-space-mono), monospace",
+        sans: "var(--font-inter), system-ui, sans-serif",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -60,9 +64,6 @@ const config: Config = {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
-        },
-        fontFamily: {
-          mono: ["var(--font-space-mono)", "monospace"],
         },
       },
       borderRadius: {
