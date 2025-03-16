@@ -91,31 +91,31 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-20 md:py-20">
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
             <div className="w-full md:w-3/5">
-              <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
-                AI WILL IMPACT
+              <h1 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                From AI Complexity
                 <br />
-                YOUR BUSINESS
+                to Competitive Advantage
               </h1>
-              <p className="text-xl md:text-4xl mb-12 max-w-2xl">
-                How will <span className="font-bold">you</span> take advantage?
+              <p className="text-xl md:text-2xl mb-12 max-w-2xl">
+                Stop feeling overwhelmed.
+                <br />
+                Start seeing results <span className='bg-green-200'>within days</span>.
               </p>
               <Button
                 href="https://cal.com/amgando/free-strategy-call"
                 variant="primary"
                 size="large"
               >
-                WE CAN HELP
+                BOOK A STRATEGY CALL (free)
                 <ArrowRight className="ml-2" />
               </Button>
               <p className="mt-4 text-xl text-gray-700 py-8 pl-2">
-                <strong>28 years</strong> building business automation solutions
+                <strong>28 years</strong> building automation solutions
                 <br />
-                <strong>80 enterprise clients</strong> with 1 in 10 among Fortune 500
-                <br />
-                <strong>15k students</strong> including founders and tech managers 
+                <strong>80+ enterprise clients</strong> including six of the Fortune 100
               </p>
-              <p className="text-xl text-gray-700 py-4 pl-2">
-                Transform AI confusion into competitive advantage
+              <p className="text-xl text-gray-700 py-8 pl-2">
+              AI is transforming your industry now. <br />We can help you turn disruption into your competitive edge.
               </p>
             </div>
             <div className="w-full md:w-2/5 h-70 md:h-[530px] border border-gray-400">
