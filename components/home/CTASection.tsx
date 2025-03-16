@@ -6,7 +6,7 @@ import Button from "../Button"
 export default function CTASection() {
   return (
     <section className="border-b border-black">
-      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4 py-10 sm:py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
             Ready to transform your business?
