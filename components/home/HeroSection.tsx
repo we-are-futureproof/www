@@ -57,7 +57,7 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               <span className="sm:hidden"> </span>It's time to take advantage of this disruption.
             </p>
           </div>
-          <div className="w-full md:w-2/5 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
+          <div className="w-full md:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
             {/* Hero testimonial section */}
             <div className="w-full h-full relative">
               <div 
