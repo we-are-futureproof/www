@@ -25,8 +25,8 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
   return (
     <section className="border-b border-black">
       <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
-        <div className="flex flex-col md:flex-row items-start gap-6 sm:gap-8 md:gap-12">
-          <div className="w-full md:w-3/5">
+        <div className="flex flex-col xl:flex-row items-start gap-6 sm:gap-8 md:gap-12">
+          <div className="w-full xl:w-3/5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin mb-4 sm:mb-6 md:mb-8 leading-tight">
               From AI Complexity
               <br />
@@ -45,7 +45,7 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               BOOK A (free) STRATEGY CALL
               <ArrowRight className="ml-2" />
             </Button>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
+            <p className="mt-4 xl:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
               <span className="hidden md:inline"> • </span><strong>28 years</strong> building automation solutions
               <br className="hidden md:block" /><span className="inline"> • </span>
               <strong>80+ enterprise clients</strong> including six of the Fortune 100
@@ -57,7 +57,7 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               <span className="sm:hidden"> </span>It's time to take advantage of this disruption.
             </p>
           </div>
-          <div className="w-full md:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
+          <div className="w-full xl:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
             {/* Hero testimonial section */}
             <div className="w-full h-full relative">
               <div 

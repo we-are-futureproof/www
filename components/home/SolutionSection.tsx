@@ -54,20 +54,20 @@ export default function SolutionSection({ hoveredItem, setHoveredItem }: Solutio
         {SOLUTION_ITEMS.map((item, index) => (
           <li
             key={index}
-            className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-200 min-h-[120px]"
+            className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-200 md:min-h-[120px]"
             onMouseEnter={() => handleSetHoveredItem(index + 4)}
             onMouseLeave={() => handleSetHoveredItem(null)}
           >
             <span className="font-bold mr-3 sm:mr-4 text-sm sm:text-base md:text-lg mb-14 sm:mb-16 md:mb-20">{item.number}</span>
             <div
               className={`overflow-hidden transition-all duration-100 ${
-                currentHoveredItem === index + 4 ? "max-h-96 opacity-100" : "md:max-h-8 md:opacity-70 max-h-96 opacity-100"
+                currentHoveredItem === index + 4 ? "max-h-96 opacity-100" : "xl:max-h-8 xl:opacity-70 max-h-96 opacity-100"
               }`}
             >
               <p className="text-sm sm:text-base md:text-lg">
                 {item.descriptionPart1}
-                <span className="md:hidden">{" " + item.descriptionPart2}</span>
-                <span className="hidden md:inline">{currentHoveredItem === index + 4 ? <span>{" " + item.descriptionPart2}</span> : <span>...</span>}</span>
+                <span className="xl:hidden">{" " + item.descriptionPart2}</span>
+                <span className="hidden xl:inline">{currentHoveredItem === index + 4 ? <span>{" " + item.descriptionPart2}</span> : <span>...</span>}</span>
               </p>
             </div>
           </li>

@@ -52,7 +52,7 @@ export default function ProblemSection({ hoveredItem, setHoveredItem }: ProblemS
         {PROBLEM_ITEMS.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-100 min-h-[120px]"
+                  className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-100 md:min-h-[120px]"
                   onMouseEnter={() => handleSetHoveredItem(index)}
                   onMouseLeave={() => handleSetHoveredItem(null)}
                   onClick={() => handleSetHoveredItem(currentHoveredItem === index ? null : index)}
@@ -62,7 +62,7 @@ export default function ProblemSection({ hoveredItem, setHoveredItem }: ProblemS
                     <span className="font-thin block mb-1 text-sm sm:text-base md:text-lg">{item.title}</span>
                     <span
                       className={`font-normal text-gray-700 block overflow-hidden transition-all duration-200 text-sm sm:text-base md:text-lg ${
-                        currentHoveredItem === index ? "max-h-96 opacity-100" : "md:max-h-0 md:opacity-0 max-h-96 opacity-100"
+                        currentHoveredItem === index ? "max-h-96 opacity-100" : "xl:max-h-0 xl:opacity-0 max-h-96 opacity-100"
                       }`}
                     >
                       {item.description}
