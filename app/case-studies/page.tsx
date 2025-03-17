@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import Footer from "../../components/Footer"
 import Button from "../../components/Button"
 import Header from "../../components/Header"
+import CTASection from "../../components/CTASection"
 
 export default function CaseStudiesPage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
@@ -141,6 +141,9 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
 
       {/* Footer */}
       <Footer />

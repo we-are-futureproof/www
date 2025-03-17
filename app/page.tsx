@@ -11,7 +11,7 @@ import ProblemSection from "../components/home/ProblemSection"
 import SolutionSection from "../components/home/SolutionSection"
 import ServicesPreview from "../components/home/ServicesPreview"
 import CaseStudyPreview from "../components/home/CaseStudyPreview"
-import CTASection from "../components/home/CTASection"
+import CTASection from "../components/CTASection"
 
 export default function HomePage() {
   // Get hero quotes

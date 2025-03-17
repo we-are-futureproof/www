@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowRight } from "lucide-react"
-import Button from "../Button"
+import Button from "./Button"
 
 export default function CTASection() {
   return (

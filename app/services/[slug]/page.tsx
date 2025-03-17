@@ -1,11 +1,12 @@
 "use client"
 
-import { useState, use } from "react"
+import { use } from "react"
 import Link from "next/link"
-import { ArrowRight, ArrowLeft } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import Footer from "../../../components/Footer"
 import Header from "../../../components/Header"
+import CTASection from "../../../components/CTASection"
 
 interface ServicePageProps {
   params: Promise<{
@@ -14,7 +15,6 @@ interface ServicePageProps {
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null)
 
   const services = {
     "ai-opportunity-assessment": {
@@ -232,23 +232,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="border-b border-black">
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">READY TO MAKE SOME MOVES?</h2>
-            <p className="text-xl mb-12">
-              Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
-              advisory services can help you navigate the complex AI landscape.
-            </p>
-            <Link
-              href="https://cal.com/amgando/free-strategy-call"
-              className="inline-flex items-center bg-blue-200 text-black border border-black px-8 py-4 text-lg font-bold transition-colors hover:bg-blue-800 hover:text-white"
-            >
-              SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection />
 
       {/* Footer */}
       <Footer />
