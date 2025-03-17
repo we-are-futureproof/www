@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import Button from "../Button"
-import { handleColorHoverEffect } from "../../lib/colorUtils"
+import { handleColorHoverEffect, getRandomColor } from "../../lib/colorUtils"
 
 interface ServiceItem {
   title: string
@@ -50,6 +50,7 @@ const SERVICE_ITEMS: ServiceItem[] = [
 ]
 
 export default function ServicesPreview() {
+  // We no longer need to pre-generate random colors since our hover effect logic handles everything
   return (
     <section className="border-b border-black">
       <div className="container mx-auto px-4 py-20">
@@ -58,7 +59,8 @@ export default function ServicesPreview() {
           {SERVICE_ITEMS.map((service, index) => (
             <div
               key={index}
-              className="border border-black p-6 cursor-pointer group relative flex flex-col h-full"
+              className="border border-black p-6 cursor-pointer group relative flex flex-col h-full service-card"
+              id={`service-card-${index}`}
               onClick={() => (window.location.href = service.link)}
               onMouseEnter={handleColorHoverEffect.onMouseEnter}
               onMouseLeave={handleColorHoverEffect.onMouseLeave}

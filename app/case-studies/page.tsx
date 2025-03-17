@@ -13,20 +13,24 @@ export default function CaseStudiesPage() {
   const caseStudies = [
     {
       id: "knowspace",
-      title: "Knowspace",
-      description:
-        "How we helped Knowspace develop an advanced awareness system for assisted living facilities that monitors and protects seniors with cognitive impairments.",
-      results: [
-        "Reduced EMQX deployment complexity by 50%",
-        "Cut infrastructure costs by 90%",
-        "Maintained critical 10-second system response time",
+      title: "Knowspace - Assisted Living Facility Awareness System",
+      description: [
+        "Futureproof designed, developed and piloted an advanced awareness system for assisted living facilities (ALF) that monitors and protects seniors with cognitive impairments, alerting family and caregivers within 3 seconds of an 'event of interest'.",
+        "During a 60-day pilot in late 2024, seniors were able to choose one or more wearable devices from a broad catalog including wristwatches and pendants among other stylish, lightweight options. Each device was automatically provisioned in seconds at the front desk by ALF staff using a custom, secure mobile app.",
+        "30 million data points were collected at a rate of 1M per device per week with capacity for 1000 devices and an operating cost of under $500/mo. Severral interior and exterior receivers were enough to track resident movement throughout the facility 24/7."
       ],
-      services: ["AI Implementation Roadmap", "AI Vendor Evaluation"],
+      results: [
+        "1M data points per device per week",
+        "3-second latency from event to alert",
+        "Deployment complexity reduced by 50%",
+        "Data pipeline costs reduced by 90%",
+      ],
+      services: ["Opportunity Assessment", "Implementation Roadmap", "Vendor Evaluation", "Pilot Execution", "Education and Handoff"],
       link: "/case-studies/knowspace",
     },
     {
       id: "case-study-2",
-      title: "Manufacturing Co.",
+      title: "Manufacturing Distributor.",
       description:
         "Helping a mid-sized manufacturing company implement AI-powered predictive maintenance to reduce equipment downtime and maintenance costs.",
       results: [
@@ -84,7 +88,13 @@ export default function CaseStudiesPage() {
                   <div className="p-8 md:p-12 flex flex-col justify-between">
                     <div>
                       <h2 className="text-3xl font-bold mb-4">{caseStudy.title}</h2>
-                      <p className="text-lg mb-6">{caseStudy.description}</p>
+                      {Array.isArray(caseStudy.description) ? (
+                        caseStudy.description.map((paragraph, i) => (
+                          <p key={i} className="text-sm md:text-lg mb-6">{paragraph}</p>
+                        ))
+                      ) : (
+                        <p className="text-sm md:text-lg mb-6">{caseStudy.description}</p>
+                      )}
 
                       <h3 className="text-xl font-bold mb-3">RESULTS</h3>
                       <ul className="space-y-2 mb-6">
