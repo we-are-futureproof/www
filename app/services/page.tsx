@@ -119,15 +119,21 @@ export default function ServicesPage() {
                 onMouseEnter={handleColorHoverEffect.onMouseEnter}
                 onMouseLeave={handleColorHoverEffect.onMouseLeave}
               >
-                <h2 className="text-xl font-bold mb-4">{service.title}</h2>
-                <p className="mb-6">{service.description}</p>
-                <div className="mt-auto">
-                  <div className="inline-flex items-center font-bold group-hover:underline">
-                    LEARN MORE <ArrowRight className="ml-2 h-4 w-4" />
+                {/* Row 1: Header with title and learn more link */}
+                <div className="flex justify-between items-start mb-4">
+                  <h2 className="text-xl font-bold">{service.title}</h2>
+                  <div className="inline-flex items-center font-bold group-hover:underline text-sm">
+                    LEARN MORE <ArrowRight className="ml-1 h-4 w-4" />
                   </div>
                 </div>
                 
-                <div className="mt-8">
+                {/* Row 2: Description - fixed height */}
+                <div className="min-h-[160px]">
+                  <p>{service.description}</p>
+                </div>
+                
+                {/* Row 3: Benefits - grows to fill remaining space */}
+                <div className="flex-grow">
                   <h3 className="text-sm font-bold mb-4">BENEFITS</h3>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, i) => (
