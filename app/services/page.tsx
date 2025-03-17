@@ -2,17 +2,13 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ArrowRight, Menu, X } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Button from "../../components/Button"
 import Footer from "../../components/Footer"
+import Header from "../../components/Header"
 
 export default function ServicesPage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
 
   const services = [
     {
@@ -92,48 +88,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white text-black font-mono">
       {/* Header */}
-      <header className="border-b border-black relative z-20">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold">
-            WE ARE FUTUREPROOF
-          </Link>
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/services" className="hover:underline">
-              SERVICES
-            </Link>
-            <Link href="/case-studies" className="hover:underline">
-              CASE STUDIES
-            </Link>
-          </nav>
-          <button className="md:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-black z-10">
-            <div className="container mx-auto px-4 py-4">
-              <nav className="flex flex-col space-y-4">
-                <Link
-                  href="/services"
-                  className="py-2 hover:underline font-bold"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  SERVICES
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="py-2 hover:underline font-bold"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  CASE STUDIES
-                </Link>
-              </nav>
-            </div>
-          </div>
-        )}
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="border-b border-black bg-gray-100">
@@ -204,69 +159,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-b border-black bg-black text-white">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FUTUREPROOF</h3>
-              <p>AI strategy for business performance.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">SERVICES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/services/ai-opportunity-assessment" className="hover:underline">
-                    Opportunity
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-readiness-assessment" className="hover:underline">
-                    Readiness
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-implementation-roadmap" className="hover:underline">
-                    Roadmap
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-vendor-evaluation" className="hover:underline">
-                    Evaluation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/phased-ai-pilot-execution" className="hover:underline">
-                    Pilot
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ai-education-simplification" className="hover:underline">
-                    Education
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">CASE STUDIES</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/case-studies" className="hover:underline">
-                    All Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/case-studies/knowspace" className="hover:underline">
-                    Knowspace
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
-            <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 import { getQuotesBySection } from "../lib/quotes"
 
 // Import homepage section components
-import Header from "../components/home/Header"
+import Header from "../components/Header"
 import HeroSection from "../components/home/HeroSection"
 import ProblemSection from "../components/home/ProblemSection"
 import SolutionSection from "../components/home/SolutionSection"
