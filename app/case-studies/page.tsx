@@ -123,26 +123,6 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-b border-black">
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">READY TO MAKE SOME MOVES?</h2>
-            <p className="text-xl mb-12">
-              Schedule a free 20-minute consultation to discuss your specific business challenges and how our AI
-              advisory services can help you navigate the complex AI landscape.
-            </p>
-            <Button
-              href="https://cal.com/amgando/free-strategy-call"
-              variant="primary"
-              size="large"
-            >
-              SCHEDULE A CONSULTATION <ArrowRight className="ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <CTASection />
 
       {/* Footer */}
