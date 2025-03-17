@@ -123,17 +123,17 @@ export default function ServicesPage() {
                 <div className="flex justify-between items-start mb-4">
                   <h2 className="text-xl font-bold">{service.title}</h2>
                   <div className="inline-flex items-center font-bold group-hover:underline text-sm">
-                    LEARN MORE <ArrowRight className="ml-1 h-4 w-4" />
+                    <span className="hidden md:inline">LEARN MORE </span><ArrowRight className="ml-1 h-4 w-4" />
                   </div>
                 </div>
                 
                 {/* Row 2: Description - fixed height */}
-                <div className="min-h-[160px]">
+                <div className="min-h-[120px] md:min-h-[140px]">
                   <p>{service.description}</p>
                 </div>
                 
                 {/* Row 3: Benefits - grows to fill remaining space */}
-                <div className="flex-grow">
+                <div className="flex-grow mt-8">
                   <h3 className="text-sm font-bold mb-4">BENEFITS</h3>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, i) => (
