@@ -1,10 +1,12 @@
 "use client"
 
 import { ArrowRight } from "lucide-react"
+import { useState } from "react"
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
 import CTASection from "../../components/CTASection"
 import Button from "../../components/Button"
+import { handleColorHoverEffect } from "../../lib/colorUtils"
 
 export default function ServicesPage() {
 
@@ -89,12 +91,16 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="border-b border-black bg-gray-100">
-        <div className="container mx-auto px-4 py-20">
+      <section className="border-b border-black">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">OUR SERVICES</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl">
-              We offer a comprehensive suite of AI advisory services designed specifically for small and medium
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin mb-4 sm:mb-6 md:mb-8 leading-tight">
+              Our Services
+              <br />
+              <span className="font-sans font-bold tracking-wide text-gray-800">for AI Transformation</span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 md:mb-14 max-w-2xl">
+              We offer a comprehensive suite of <span className='bg-green-200'>AI advisory services</span> designed specifically for small and medium
               businesses. Each service is tailored to address specific challenges in the AI adoption journey.
             </p>
           </div>
@@ -103,32 +109,34 @@ export default function ServicesPage() {
 
       {/* Services List */}
       <section>
-        <div className="container mx-auto px-4 py-12">
-          <div className="space-y-12">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="border-b border-black pb-12 last:border-b-0">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
-                    <p className="text-lg mb-6">{service.description}</p>
-                    <Button
-                      href={service.link}
-                      variant="secondary"
-                    >
-                      LEARN MORE <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+              <div 
+                key={index} 
+                className="border border-black p-6 flex flex-col h-full cursor-pointer group relative"
+                onClick={() => window.location.href = service.link}
+                onMouseEnter={handleColorHoverEffect.onMouseEnter}
+                onMouseLeave={handleColorHoverEffect.onMouseLeave}
+              >
+                <h2 className="text-xl font-bold mb-4">{service.title}</h2>
+                <p className="mb-6">{service.description}</p>
+                <div className="mt-auto">
+                  <div className="inline-flex items-center font-bold group-hover:underline">
+                    LEARN MORE <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">BENEFITS</h3>
-                    <ul className="space-y-4">
-                      {service.benefits.map((benefit, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="font-bold mr-4">{i + 1}.</span>
-                          <p>{benefit}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <h3 className="text-sm font-bold mb-4">BENEFITS</h3>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, i) => (
+                      <li key={i} className="text-sm flex items-start">
+                        <span className="font-bold mr-2">{i + 1}.</span>
+                        <p>{benefit}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

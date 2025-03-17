@@ -2,23 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import Button from "../Button"
-
-// Function for getting random colors - client-side only
-const colors = [
-  "bg-pink-200",      // Light pink - playful
-  "bg-yellow-200",    // Soft yellow - sunny
-  "bg-blue-200",      // Sky blue - cheerful
-  "bg-green-200",     // Light green - fresh
-  "bg-orange-200",    // Soft orange - warm
-  "bg-purple-200",    // Lavender - whimsical
-  "bg-red-200",       // Light red - energetic
-  "bg-teal-200",      // Seafoam - unexpected
-  "bg-lime-200",      // Bright lime - vibrant
-  "bg-fuchsia-200",   // Bright pink - fun
-];
-
-// This function is safe to use in client-side event handlers
-const getRandomColorClientSide = () => colors[Math.floor(Math.random() * colors.length)];
+import { handleColorHoverEffect } from "../../lib/colorUtils"
 
 interface ServiceItem {
   title: string
@@ -76,28 +60,8 @@ export default function ServicesPreview() {
               key={index}
               className="border border-black p-6 cursor-pointer group relative flex flex-col h-full"
               onClick={() => (window.location.href = service.link)}
-              onMouseEnter={(e) => {
-                // Use the client-side version for interactions
-                const randomColor = getRandomColorClientSide();
-
-                // Remove any existing color classes and transition classes
-                const currentClasses = e.currentTarget.className.split(" ")
-                const newClasses = currentClasses.filter((cls) => !cls.match(/bg-\w+-\d+/) && !cls.match(/transition-/))
-
-                // Add the new random color with fast transition in
-                e.currentTarget.className = [...newClasses, randomColor, "transition-colors", "duration-500", "ease-in"].join(" ")
-              }}
-              onMouseLeave={(e) => {
-                // When mouse leaves, set a slow transition out
-                const currentClasses = e.currentTarget.className.split(" ")
-                // Remove existing transition classes first
-                const baseClasses = currentClasses.filter((cls) => !cls.match(/transition-/) && !cls.match(/duration-/) && !cls.match(/ease-/))
-                // Add slow transition out classes
-                const newClasses = [...baseClasses, "transition-colors", "duration-[5000ms]", "ease-out"]
-                // Remove color classes
-                const finalClasses = newClasses.filter((cls) => !cls.match(/bg-\w+-\d+/))
-                e.currentTarget.className = finalClasses.join(" ")
-              }}
+              onMouseEnter={handleColorHoverEffect.onMouseEnter}
+              onMouseLeave={handleColorHoverEffect.onMouseLeave}
             >
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="mb-6">{service.description}</p>

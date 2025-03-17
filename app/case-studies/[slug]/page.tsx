@@ -2,7 +2,7 @@
 
 import { useState, use } from "react"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowRight, ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import Footer from "../../../components/Footer"
 import Header from "../../../components/Header"
