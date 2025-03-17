@@ -52,7 +52,7 @@ export default function ProblemSection({ hoveredItem, setHoveredItem }: ProblemS
         {PROBLEM_ITEMS.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-100"
+                  className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-100 min-h-[120px]"
                   onMouseEnter={() => handleSetHoveredItem(index)}
                   onMouseLeave={() => handleSetHoveredItem(null)}
                   onClick={() => handleSetHoveredItem(currentHoveredItem === index ? null : index)}

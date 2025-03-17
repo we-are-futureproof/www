@@ -54,7 +54,7 @@ export default function SolutionSection({ hoveredItem, setHoveredItem }: Solutio
         {SOLUTION_ITEMS.map((item, index) => (
           <li
             key={index}
-            className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-200"
+            className="flex items-start border-b border-transparent md:cursor-pointer md:hover:border-black md:transition-all md:duration-200 min-h-[120px]"
             onMouseEnter={() => handleSetHoveredItem(index + 4)}
             onMouseLeave={() => handleSetHoveredItem(null)}
           >

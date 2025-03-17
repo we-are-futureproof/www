@@ -29,7 +29,7 @@ export default function HomePage() {
       <HeroSection heroQuotes={heroQuotes} />
 
       {/* Problem and Solution Section */}
-      <section className="border-b border-black bg-gray-100">
+      <section className="border-b border-black bg-gray-100 min-h-[750px]">
         <div className="container mx-auto pl-4 pr-8 py-12 sm:py-16 md:py-20">
           <div className="grid md:grid-cols-2 gap-8 md:gap-24">
             <ProblemSection 
