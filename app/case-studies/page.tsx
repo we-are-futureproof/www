@@ -27,6 +27,22 @@ export default function CaseStudiesPage() {
       ],
       services: ["Opportunity Assessment", "Implementation Roadmap", "Vendor Evaluation", "Pilot Execution", "Education and Handoff"],
       link: "/case-studies/knowspace",
+    },
+    {
+      id: "peak-sensor-systems",
+      title: "PEAK Sensor Systems - Design-Build Structural Monitoring Supplier",
+      description: [
+        "Futureproof designed and built a new marketing function including competitive marketing intelligence monitor and a content production pipeline.",
+        "The design and development was completed within 3 weeks of project kickoff using low and no code platforms like Airbnb and n8n to quickly develop a usable application.",
+        "Each day, hundreds of articles are consumed by the system based on customizable keyword search and monitoring. These articles are analyzed and new content drafted for human review."
+      ],
+      results: [
+        "1000s of articles per week are scanned for new and competitive opportunities automatically for pennies per day operating costs",
+        "Daily situational awareness report provides insight into competitive market activity",
+        "Fully customizable system costs a fraction of the price of similar applications"
+      ],
+      services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],
+      link: "/case-studies/peak-sensor-systems",
     }
   ]
 
@@ -98,6 +114,13 @@ export default function CaseStudiesPage() {
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
                         alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
                         className="w-full h-full object-cover"
+                      />
+                    ) : caseStudy.id === "peak-sensor-systems" ? (
+                      <img
+                        src="/online-hands-reaching-lightbulb.png"
+                        alt="Minimalist line drawing of a dashboard - representing PEAK's marketing intelligence system"
+                        className="w-full h-full object-cover"
+                        style={{ objectPosition: 'center -10px' }}
                       />
                     ) : (
                       <div className="bg-gray-200 h-full w-full"></div>

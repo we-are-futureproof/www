@@ -47,6 +47,35 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
         "AI for Pattern Recognition",
       ],
     },
+    "peak-sensor-systems": {
+      title: "PEAK Sensor Systems",
+      subtitle: "Design-Build Structural Monitoring Supplier",
+      description:
+        "PEAK Sensor Systems provides structural monitoring solutions for infrastructure and industrial applications. They needed a cost-effective way to monitor market trends and generate content for their marketing efforts.",
+      challenge:
+        "PEAK Sensor Systems needed to establish a marketing function that could effectively monitor competitive intelligence and generate content, but with limited resources and a need for quick implementation. They required a solution that could automatically gather industry news, identify market opportunities, and assist in content creation.",
+      solution:
+        "Futureproof designed and built a new marketing function including a competitive marketing intelligence monitor and a content production pipeline. The solution was implemented using low-code and no-code platforms like Airbnb and n8n to quickly develop a usable application. We created an automated system that scans industry publications, analyzes content, and drafts preliminary marketing materials for human review.",
+      results: [
+        "Thousands of articles per week are scanned for new and competitive opportunities automatically for pennies per day in operating costs",
+        "Daily situational awareness report provides insight into competitive market activity",
+        "Fully customizable system costs a fraction of the price of similar applications",
+        "Implementation completed within 3 weeks of project kickoff"
+      ],
+      testimonial: {
+        quote:
+          "Futureproof delivered an incredibly efficient marketing intelligence system in record time. Their approach using lightweight, flexible tools allowed us to get up and running quickly without a major investment in custom software. The system has already identified several market opportunities we would have otherwise missed.",
+        author: "Abe Uccello, Owner, PEAK Sensor Systems",
+      },
+      services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],
+      technologies: [
+        "Low-code/No-code Platforms",
+        "Airbnb",
+        "n8n Workflow Automation",
+        "Content Analysis",
+        "Automated Reporting",
+      ],
+    },
   }
 
   // Unwrap params using React.use()
@@ -92,11 +121,23 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               <h1 className="text-4xl md:text-6xl font-bold mb-4">{caseStudy.title}</h1>
               <h2 className="text-2xl mb-8">{caseStudy.subtitle}</h2>
 
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
-                alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
-                className="w-full h-64 md:h-96 object-cover mb-8 border border-black"
-              />
+              {slug === "knowspace" ? (
+                <img
+                  src="/oneline-oldhands.png"
+                  alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
+                  className="w-full h-64 md:h-96 object-cover mb-8 border border-black"
+                  style={{ objectPosition: 'center -100px' }}
+                />
+              ) : slug === "peak-sensor-systems" ? (
+                <img
+                  src="/online-hands-reaching-lightbulb.png"
+                  alt="Minimalist line drawing of a dashboard - representing PEAK's marketing intelligence system"
+                  className="w-full h-64 md:h-96 object-cover mb-6 border border-black"
+                  style={{ objectPosition: 'center -170px' }}
+                />
+              ) : (
+                <div className="w-full h-64 md:h-96 bg-gray-200 mb-8 border border-black"></div>
+              )}
 
               <p className="text-xl mb-8">{caseStudy.description}</p>
 
