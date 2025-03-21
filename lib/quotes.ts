@@ -183,7 +183,7 @@ export const quotes: Quote[] = [
       },
       { 
         "segments": [
-          { "text": "Within weeks, we moved from uncertainty to a implementation. " },
+          { "text": "Within weeks, we moved from uncertainty to an implementation. " },
         ]
       }
     ],
@@ -268,7 +268,9 @@ export const quotes: Quote[] = [
 
 // Helper function to get quotes for a specific section
 export const getQuotesBySection = (section: string): Quote[] => {
-  return quotes //.filter(quote => quote.section === section);
+  return quotes;
+  // Note: In the future, if we need to filter quotes by section, we can uncomment:
+  // return quotes.filter(quote => quote.section === section);
 };
 
 // Helper function to convert a quote to paragraphs with segments

@@ -19,19 +19,19 @@ export default function CaseStudyPreview() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">KNOWSPACE</h3>
                 <p className="text-sm md:text-lg mb-6">
-                  In cooperation with Knowpsace leadership, we designed, developed and deployed an advanced awareness
+                  In cooperation with Knowspace leadership, we designed, developed and deployed an advanced awareness
                   system for assisted living facilities (ALF) that monitors and protects seniors with cognitive
                   impairments.
                 </p>
                 <p className="text-sm md:text-lg mb-6">
                   During a 60-day pilot in late 2024, seniors were able to choose one or more wearable devices from a
-                  broad catelog. This included wristwatches and pendants among other stylish, lightweight options.
+                  broad catalog. This included wristwatches and pendants among other stylish, lightweight options.
                   Each device was automatically provisioned in seconds at the front desk by ALF staff using a custom,
                   secure mobile app.
                 </p>
                 <p className="text-sm md:text-lg mb-6">
                   30 million data points were collected at a rate of 1M per device per week with an operating cost of
-                  under $300/mo and capacity for 1000 devices. Severral interior and exterior receivers were enough to
+                  under $300/mo and capacity for 1000 devices. Several interior and exterior receivers were enough to
                   track resident movement throughout the facility 24/7.
                 </p>
                 <ul className="text-xs md:text-base space-y-2 mb-8">

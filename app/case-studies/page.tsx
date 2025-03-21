@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
       description: [
         "Futureproof designed, developed and piloted an advanced awareness system for assisted living facilities (ALF) that monitors and protects seniors with cognitive impairments, alerting family and caregivers within 3 seconds of an 'event of interest'.",
         "During a 60-day pilot in late 2024, seniors were able to choose one or more wearable devices from a broad catalog including wristwatches and pendants among other stylish, lightweight options. Each device was automatically provisioned in seconds at the front desk by ALF staff using a custom, secure mobile app.",
-        "30 million data points were collected at a rate of 1M per device per week with capacity for 1000 devices and an operating cost of under $500/mo. Severral interior and exterior receivers were enough to track resident movement throughout the facility 24/7."
+        "30 million data points were collected at a rate of 1M per device per week with capacity for 1000 devices and an operating cost of under $500/mo. Several interior and exterior receivers were enough to track resident movement throughout the facility 24/7."
       ],
       results: [
         "1M data points per device per week",
