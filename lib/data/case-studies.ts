@@ -60,13 +60,12 @@ export const caseStudies: Record<string, CaseStudy> = {
         "Futureproof helped us navigate the complex technical landscape of IoT and AI, saving us months of trial and error. Their structured approach to technology selection and architecture design was invaluable in helping us build a scalable, reliable system that meets our critical performance requirements.",
       author: "Jack Burden, Founder and CEO, Knowspace",
     },
-    services: ["AI Opportunity Assessment (free)", "AI Evaluation", "AI Roadmap", "AI Pilot"],
+    services: ["Opportunity Assessment", "Vendor Evaluation", "Implementation Roadmap", "Pilot Execution"],
     technologies: [
       "Bluetooth Low Energy (BLE)",
-      "MQTT",
+      "Message Queuing Telemetry Transport (MQTT)",
       "Kafka Stream Processing",
-      "Data Cleaning and Device Positioning",
-      "AI for Pattern Recognition",
+      "Data Cleaning and Device Positioning"
     ],
     image: {
       src: "/oneline-oldhands.png",
@@ -98,10 +97,10 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
     services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],
     technologies: [
-      "Low-code/No-code Platforms",
-      "Airbnb",
-      "n8n Workflow Automation",
-      "Content Analysis",
+      "Low-code/No-code Platform",
+      "AI Model Orchestration",
+      "AI RAG Customization",
+      "Content Analysis Pipeline",
       "Automated Reporting",
     ],
     image: {
