@@ -27,33 +27,7 @@ export default function CaseStudiesPage() {
       ],
       services: ["Opportunity Assessment", "Implementation Roadmap", "Vendor Evaluation", "Pilot Execution", "Education and Handoff"],
       link: "/case-studies/knowspace",
-    },
-    {
-      id: "case-study-2",
-      title: "Manufacturing Distributor.",
-      description:
-        "Helping a mid-sized manufacturing company implement AI-powered predictive maintenance to reduce equipment downtime and maintenance costs.",
-      results: [
-        "Reduced unplanned downtime by 37%",
-        "Decreased maintenance costs by 28%",
-        "Improved equipment lifespan by 15%",
-      ],
-      services: ["AI Readiness Assessment", "Phased AI Pilot Execution"],
-      link: "/case-studies/manufacturing-co",
-    },
-    {
-      id: "case-study-3",
-      title: "Retail Chain",
-      description:
-        "Guiding a regional retail chain through the implementation of AI-powered inventory management and demand forecasting solutions.",
-      results: [
-        "Reduced inventory holding costs by 22%",
-        "Decreased stockouts by 35%",
-        "Improved inventory turnover by 18%",
-      ],
-      services: ["AI Opportunity Assessment", "AI Implementation Roadmap"],
-      link: "/case-studies/retail-chain",
-    },
+    }
   ]
 
   return (
