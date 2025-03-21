@@ -2,7 +2,7 @@
 
 ## UI Components Library
 
-This guide provides detailed information about the reusable UI components in the Futureproof website.
+This guide provides detailed information about the reusable UI components in the futureproof website.
 
 ### General Components
 

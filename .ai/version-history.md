@@ -1,6 +1,6 @@
 # Version History
 
-This document tracks the notable changes and updates to the Futureproof website project.
+This document tracks the notable changes and updates to the futureproof website project.
 
 ## Current Version: 0.2.0 (Development)
 

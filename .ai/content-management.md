@@ -2,7 +2,7 @@
 
 ## Content Structure Overview
 
-The Futureproof website content is organized into the following main categories:
+The futureproof website content is organized into the following main categories:
 
 1. **Homepage Content**
    - Hero section

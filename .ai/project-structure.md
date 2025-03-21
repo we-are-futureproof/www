@@ -1,4 +1,4 @@
-# Futureproof Website Project Structure
+# futureproof Website Project Structure
 
 ## Directory Structure
 

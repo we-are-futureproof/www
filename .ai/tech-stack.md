@@ -1,4 +1,4 @@
-# Futureproof Website Tech Stack
+# futureproof Website Tech Stack
 
 ## Core Technologies
 

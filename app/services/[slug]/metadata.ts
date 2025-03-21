@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   // If service not found, return default metadata
   if (!service) {
     return {
-      title: "Service Not Found | Futureproof",
+      title: "Service Not Found | futureproof",
       description: "The requested service could not be found.",
     };
   }

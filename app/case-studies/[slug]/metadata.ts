@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   // If case study not found, return default metadata
   if (!caseStudy) {
     return {
-      title: "Case Study Not Found | Futureproof",
+      title: "Case Study Not Found | futureproof",
       description: "The requested case study could not be found.",
     };
   }

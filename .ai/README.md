@@ -1,6 +1,6 @@
-# Futureproof Website Project AI Documentation
+# futureproof Website Project AI Documentation
 
-Welcome to the AI documentation for the Futureproof website project. This folder contains comprehensive documentation to help quickly understand the project structure, technical stack, roadmap, and development guidelines.
+Welcome to the AI documentation for the futureproof website project. This folder contains comprehensive documentation to help quickly understand the project structure, technical stack, roadmap, and development guidelines.
 
 ## Documentation Index
 
