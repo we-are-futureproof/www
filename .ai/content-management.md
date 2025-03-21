@@ -52,7 +52,7 @@ The `paragraphs` array allows for rich text formatting with multiple paragraphs,
 
 ### Services
 
-Services content is currently defined within the React components:
+Services content is currently defined within the page files:
 
 - The services overview is in `app/services/page.tsx`
 - Service detail pages are in `app/services/[slug]/page.tsx`
@@ -65,7 +65,7 @@ Each service includes:
 
 ### Case Studies
 
-Case studies content is defined within:
+Case studies content is defined within page files and a component:
 - The case studies overview in `app/case-studies/page.tsx`
 - Preview on homepage in `components/home/CaseStudyPreview.tsx`
 - Individual case study pages in `app/case-studies/[slug]/page.tsx`

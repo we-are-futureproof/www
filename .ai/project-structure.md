@@ -5,7 +5,7 @@
 ### Top-Level Structure
 
 - `app/` - Next.js application routes and pages using App Router
-- `components/` - Reusable React components (11 components total)
+- `components/` - Reusable React components (10 components total)
 - `hooks/` - Custom React hook (1 hook)
 - `lib/` - Utility functions and shared code (3 files)
 - `public/` - Static assets (images, fonts, favicon)
