@@ -64,12 +64,26 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               <h2 className="text-2xl mb-8">{caseStudy.subtitle}</h2>
 
               {caseStudy.image ? (
-                <img
-                  src={caseStudy.image.src}
-                  alt={caseStudy.image.alt}
-                  className="w-full h-64 md:h-96 object-cover mb-8 border border-black"
-                  style={caseStudy.image.detailPosition ? { objectPosition: caseStudy.image.detailPosition } : undefined}
-                />
+                <>
+                  <img
+                    src={caseStudy.image.src}
+                    alt={caseStudy.image.alt}
+                    className="w-full h-64 md:h-96 object-cover mb-8 border border-black"
+                    style={caseStudy.image.detailPosition ? { objectPosition: caseStudy.image.detailPosition.default } : undefined}
+                  />
+                  <style jsx>{`
+                    @media (min-width: 640px) {
+                      img {
+                        object-position: ${caseStudy.image.detailPosition?.sm || caseStudy.image.detailPosition?.default};
+                      }
+                    }
+                    @media (min-width: 768px) {
+                      img {
+                        object-position: ${caseStudy.image.detailPosition?.md || caseStudy.image.detailPosition?.default};
+                      }
+                    }
+                  `}</style>
+                </>
               ) : (
                 <div className="w-full h-64 md:h-96 bg-gray-200 mb-8 border border-black"></div>
               )}

@@ -16,8 +16,12 @@ export interface CaseStudy {
   image: {
     src: string;
     alt: string;
-    detailPosition?: string; // For object-position CSS in detail view
     listPosition?: string;  // For object-position CSS in list view
+    detailPosition?: {
+      sm?: string;  // Small screens
+      md?: string;  // Medium screens and up
+      default: string; // Fallback position
+    };
   };
 }
 
@@ -32,8 +36,12 @@ export interface CaseStudyPreview {
   image: {
     src: string;
     alt: string;
-    detailPosition?: string; // For object-position CSS in detail view
     listPosition?: string;  // For object-position CSS in list view
+    detailPosition?: {
+      sm?: string;  // Small screens
+      md?: string;  // Medium screens and up
+      default: string; // Fallback position
+    };
   };
 }
 
@@ -70,7 +78,9 @@ export const caseStudies: Record<string, CaseStudy> = {
     image: {
       src: "/oneline-oldhands.png",
       alt: "Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system",
-      detailPosition: "center -100px",
+      detailPosition: {
+        default: "center -100px" // Works well across all sizes
+      },
       listPosition: "center center"
     }
   },
@@ -106,7 +116,11 @@ export const caseStudies: Record<string, CaseStudy> = {
     image: {
       src: "/online-hands-reaching-lightbulb.png",
       alt: "Minimalist line drawing of a dashboard - representing PEAK's marketing intelligence system",
-      detailPosition: "center -170px",
+      detailPosition: {
+        sm: "center -70px",
+        md: "center -170px",
+        default: "center -70px"  // Fallback
+      },
       listPosition: "center center"
     }
   }
