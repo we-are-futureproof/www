@@ -28,7 +28,7 @@
 
 | Component/Library | Purpose |
 |-------------------|---------|
-| ~~`date-fns`~~ | ~~Date utilities~~ (Unused but included in dependencies) |
+| none | n/a |
 
 ## Development Tools
 
