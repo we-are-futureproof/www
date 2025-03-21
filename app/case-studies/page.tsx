@@ -6,45 +6,13 @@ import Footer from "../../components/Footer"
 import Button from "../../components/Button"
 import Header from "../../components/Header"
 import CTASection from "../../components/CTASection"
+import { getAllCaseStudyPreviews } from "@/lib/data/case-studies"
 
 export default function CaseStudiesPage() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
 
-  const caseStudies = [
-    {
-      id: "knowspace",
-      title: "Knowspace - Assisted Living Facility Awareness System",
-      description: [
-        "Futureproof designed, developed and piloted an advanced awareness system for assisted living facilities (ALF) that monitors and protects seniors with cognitive impairments, alerting family and caregivers within 3 seconds of an 'event of interest'.",
-        "During a 60-day pilot in late 2024, seniors were able to choose one or more wearable devices from a broad catalog including wristwatches and pendants among other stylish, lightweight options. Each device was automatically provisioned in seconds at the front desk by ALF staff using a custom, secure mobile app.",
-        "30 million data points were collected at a rate of 1M per device per week with capacity for 1000 devices and an operating cost of under $500/mo. Several interior and exterior receivers were enough to track resident movement throughout the facility 24/7."
-      ],
-      results: [
-        "1M data points per device per week",
-        "3-second latency from event to alert",
-        "Deployment complexity reduced by 50%",
-        "Data pipeline costs reduced by 90%",
-      ],
-      services: ["Opportunity Assessment", "Implementation Roadmap", "Vendor Evaluation", "Pilot Execution", "Education and Handoff"],
-      link: "/case-studies/knowspace",
-    },
-    {
-      id: "peak-sensor-systems",
-      title: "PEAK Sensor Systems - Design-Build Structural Monitoring Supplier",
-      description: [
-        "Futureproof designed and built a new marketing function including competitive marketing intelligence monitor and a content production pipeline.",
-        "The design and development was completed within 3 weeks of project kickoff using low and no code platforms like Airbnb and n8n to quickly develop a usable application.",
-        "Each day, hundreds of articles are consumed by the system based on customizable keyword search and monitoring. These articles are analyzed and new content drafted for human review."
-      ],
-      results: [
-        "1000s of articles per week are scanned for new and competitive opportunities automatically for pennies per day operating costs",
-        "Daily situational awareness report provides insight into competitive market activity",
-        "Fully customizable system costs a fraction of the price of similar applications"
-      ],
-      services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],
-      link: "/case-studies/peak-sensor-systems",
-    }
-  ]
+  // Get case studies from our centralized data store
+  const caseStudies = getAllCaseStudyPreviews()
 
   return (
     <div className="min-h-screen bg-white text-black font-mono">
@@ -109,18 +77,12 @@ export default function CaseStudiesPage() {
                     </Button>
                   </div>
                   <div className="border-l border-black h-64 md:h-auto">
-                    {caseStudy.id === "knowspace" ? (
+                    {caseStudy.image ? (
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n8aZl0hSpZRp7YVHKrJUMOxz4F79oY.png"
-                        alt="Minimalist line drawing of a floor plan - representing Knowspace's assisted living facility monitoring system"
+                        src={caseStudy.image.src}
+                        alt={caseStudy.image.alt}
                         className="w-full h-full object-cover"
-                      />
-                    ) : caseStudy.id === "peak-sensor-systems" ? (
-                      <img
-                        src="/online-hands-reaching-lightbulb.png"
-                        alt="Minimalist line drawing of a dashboard - representing PEAK's marketing intelligence system"
-                        className="w-full h-full object-cover"
-                        style={{ objectPosition: 'center -10px' }}
+                        style={caseStudy.image.listPosition ? { objectPosition: caseStudy.image.listPosition } : undefined}
                       />
                     ) : (
                       <div className="bg-gray-200 h-full w-full"></div>
