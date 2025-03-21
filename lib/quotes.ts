@@ -20,10 +20,35 @@ export interface Quote {
 
 export const quotes: Quote[] = [
   {
+    "title": "",
+    "quote": "Futureproof drilled down to the essential pieces of our user relationship, properly assessed our technical understanding, and provided us with a platform that all stakeholders can succeed with in realtime operation. \n\nWe are excited to continue our AI integration with Futureproof, and look forward to their insights into our next generation offerings.",
+    "author": "Founder & CEO",
+    "company": "IoT Company",
+    "paragraphs": [
+      {
+        "segments": [
+          { "text": "Futureproof drilled down to the "},
+          { "text": "essential pieces of our user relationship, ", highlight: true },
+          { "text": " properly assessed our technical understanding."},
+        ]
+      },
+      {
+        "segments": [
+          { "text": "They provided us with a platform that all stakeholders can succeed with in realtime operation." },
+        ]
+      },
+      {
+        "segments": [
+          { "text": "We are excited to continue our AI integration with Futureproof, and look forward to their insights into our next generation offerings." }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Strategic Clarity",
     "quote": "Futureproof transformed our understanding of AI by cutting through the hype and identifying practical applications for our business.\n\nTheir methodical approach provided a clear roadmap for implementing marketing automation, resulting in a structured plan with measurable objectives.",
     "paragraphs": [
-      { 
+      {
         "segments": [
           { "text": "Futureproof transformed our understanding of AI by " },
           { "text": " cutting through the hype ", "highlight": true },

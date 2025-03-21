@@ -65,14 +65,14 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     testimonial: {
       quote:
-        "Futureproof helped us navigate the complex technical landscape of IoT and AI, saving us months of trial and error. Their structured approach to technology selection and architecture design was invaluable in helping us build a scalable, reliable system that meets our critical performance requirements.",
+        "Futureproof took a complicated technical problem and crafted a layperson's solution.  They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
       author: "Jack Burden, Founder and CEO, Knowspace",
     },
     services: ["Opportunity Assessment", "Vendor Evaluation", "Implementation Roadmap", "Pilot Execution"],
     technologies: [
-      "Bluetooth Low Energy (BLE)",
-      "Message Queuing Telemetry Transport (MQTT)",
-      "Kafka Stream Processing",
+      "BLE (Bluetooth Low Energy)",
+      "MQTT (Message Queuing Telemetry Transport)",
+      "Kafka (Stream Processing)",
       "Data Cleaning and Device Positioning"
     ],
     image: {
@@ -102,14 +102,13 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     testimonial: {
       quote:
-        "Futureproof delivered an incredibly efficient marketing intelligence system in record time. Their approach using lightweight, flexible tools allowed us to get up and running quickly without a major investment in custom software. The system has already identified several market opportunities we would have otherwise missed.",
-      author: "Maria Chen, Marketing Director, PEAK Sensor Systems",
+        "Futureproof delivered a solid marketing intelligence system in record time. Their approach used lightweight, flexible tools that allowed us to get up and running quickly.",
+      author: "Abe Uccello, Owner / Operator, PEAK Sensor Systems",
     },
     services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],
     technologies: [
       "Low-code/No-code Platform",
       "AI Model Orchestration",
-      "AI RAG Customization",
       "Content Analysis Pipeline",
       "Automated Reporting",
     ],
