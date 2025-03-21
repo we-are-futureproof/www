@@ -9,12 +9,10 @@
   - "Severral" corrected to "Several"
 - [x] Grammar issue in testimonial quote (fixed March 2025)
   - "a implementation" corrected to "an implementation"
-- [ ] Placeholder content in case studies section
-  - Manufacturing case study needs real content
-  - Retail case study needs real content
-- [ ] Missing images for some case studies
-  - Manufacturing case study has placeholder gray box
-  - Retail case study has placeholder gray box
+- [x] Placeholder content in case studies section replaced with real content
+  - PEAK Sensor Systems case study completed with real content
+- [x] Images for case studies added
+  - All case studies now have proper images
 
 ### Design Issues
 - [ ] Inconsistent padding on mobile views
@@ -46,7 +44,7 @@
 ## Planned Improvements
 
 ### Short-term (Next 2 Weeks)
-- [ ] Replace placeholder case studies with real content
+- [x] Replace placeholder case studies with real content (completed March 2025)
 - [ ] Optimize all images for web
 - [ ] Add proper loading states for all dynamic components
 - [ ] Implement responsive image strategy

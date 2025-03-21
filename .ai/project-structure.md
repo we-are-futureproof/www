@@ -31,7 +31,7 @@
   - `page.tsx` - Services overview page
   - `[slug]/` - Dynamic route for individual service pages
 - `app/case-studies/` - Case studies section
-  - `page.tsx` - Case studies overview with 3 case studies (1 detailed, 2 placeholders)
+  - `page.tsx` - Case studies overview with 2 completed case studies
   - `[slug]/` - Dynamic route for individual case study pages
 - `app/globals.css` - Global CSS with Tailwind imports
 
@@ -60,6 +60,7 @@
 - `lib/quotes.ts` - Testimonial quotes data with formatting
 - `lib/utils.ts` - Utility functions (className merging)
 - `lib/colorUtils.ts` - Color management and processing utilities
+- `lib/data/case-studies.ts` - Centralized case studies data
 
 ## AI Documentation Directory
 

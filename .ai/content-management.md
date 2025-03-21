@@ -65,10 +65,11 @@ Each service includes:
 
 ### Case Studies
 
-Case studies content is defined within page files and a component:
-- The case studies overview in `app/case-studies/page.tsx`
-- Preview on homepage in `components/home/CaseStudyPreview.tsx`
-- Individual case study pages in `app/case-studies/[slug]/page.tsx`
+Case studies content is defined in a centralized data file and rendered through components:
+- The case studies data is stored in `lib/data/case-studies.ts`
+- The case studies overview in `app/case-studies/page.tsx` imports data from the central file
+- Preview on homepage in `components/home/CaseStudyPreview.tsx` also uses the same data source
+- Individual case study pages in `app/case-studies/[slug]/page.tsx` fetch specific case study by ID
 
 Each case study includes:
 - Title

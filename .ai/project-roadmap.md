@@ -13,10 +13,9 @@
 ## Pending Tasks
 
 ### Content & Copy
-- [ ] Complete all case study detailed pages
+- [x] Complete all case study detailed pages
   - [x] Knowspace case study
-  - [ ] Manufacturing case study (placeholder)
-  - [ ] Retail case study (placeholder)
+  - [x] PEAK Sensor Systems case study
 - [ ] Finalize and refine testimonials
 - [ ] Add real client logos to the partners section
 - [ ] Create and integrate privacy policy and terms pages

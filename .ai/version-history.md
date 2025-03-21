@@ -2,7 +2,7 @@
 
 This document tracks the notable changes and updates to the Futureproof website project.
 
-## Current Version: 0.1.0 (Development)
+## Current Version: 0.2.0 (Development)
 
 ### Major Updates
 
@@ -19,12 +19,18 @@ This document tracks the notable changes and updates to the Futureproof website 
 - Custom React component library implementation
 - Homepage with hero, problem/solution sections, services preview, and case study preview
 - Services pages with basic structure
-- Case studies section with one detailed case study (Knowspace) and two placeholder case studies (Manufacturing and Retail)
+- Case studies section with initial Knowspace case study
 - Testimonial carousel component
 - Dark/light mode theming foundation (not fully implemented)
 - Basic responsive layout structure
 - TypeScript integration throughout the codebase
 - Tailwind CSS styling implementation
+
+### 0.2.0 (March 2025) - Current
+
+#### Added
+- Completed PEAK Sensor Systems case study
+- Centralized case studies data in lib/data/case-studies.ts
 
 #### Fixed
 - Typos in Knowspace case study content
@@ -36,21 +42,19 @@ This document tracks the notable changes and updates to the Futureproof website 
 - Reorganized component folder structure
 
 #### Pending
-- Complete case studies content for Manufacturing and Retail examples
 - Implement contact form functionality
 - Finalize mobile responsiveness
 - Complete dark/light mode toggle functionality
 
 ## Planned Releases
 
-### 0.2.0 (Planned)
-- Complete all case study content
+### 0.3.0 (Planned)
 - Implement contact form with validation
 - Enhance mobile responsiveness
 - Add light/dark mode toggle
 - Improve accessibility
 
-### 0.3.0 (Planned)
+### 0.4.0 (Planned)
 - Add blog/article section
 - Implement SEO optimization
 - Add analytics integration
