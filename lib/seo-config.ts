@@ -1,11 +1,11 @@
-// SEO Configuration for Futureproof website
+// SEO Configuration for futureproof website
 
 // Base site configuration
 export const siteConfig = {
-  name: "Futureproof",
-  title: "Futureproof | AI Adoption Advisory",
+  name: "futureproof",
+  title: "futureproof | AI Adoption Advisory",
   url: "https://thefutureproof.company",
-  description: "Transform AI complexity into competitive advantage. Futureproof provides practical AI adoption advisory for small and medium businesses with measurable results within days.",
+  description: "Transform AI complexity into competitive advantage. futureproof provides practical AI adoption advisory for small and medium businesses with measurable results within days.",
   keywords: [
     'AI advisory', 
     'AI adoption', 
@@ -19,7 +19,7 @@ export const siteConfig = {
     'AI pilot execution'
   ],
   ogImage: '/futureproof-meta.png',
-  authors: [{ name: 'Futureproof' }],
+  authors: [{ name: 'futureproof' }],
   category: 'Technology',
   locale: 'en_US',
 }
@@ -62,18 +62,18 @@ export function generateServiceMetadata(service: {
   const metaDescription = `${service.description.split('.')[0]}. ${service.benefits[0].split('.')[0]}.`
   
   return {
-    title: `${service.title} | Futureproof AI Services`,
+    title: `${service.title} | futureproof AI Services`,
     description: metaDescription,
     openGraph: {
       ...defaultOpenGraph,
-      title: `${service.title} | Futureproof AI Services`,
+      title: `${service.title} | futureproof AI Services`,
       description: metaDescription,
       url: `${siteConfig.url}/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
       type: 'article',
     },
     twitter: {
       ...defaultTwitter,
-      title: `${service.title} | Futureproof AI Services`,
+      title: `${service.title} | futureproof AI Services`,
       description: metaDescription,
     },
   }
@@ -91,18 +91,18 @@ export function generateCaseStudyMetadata(caseStudy: {
   const metaDescription = `${caseStudy.subtitle}: ${caseStudy.description.split('.')[0]}. Results: ${firstResult}.`
   
   return {
-    title: `${caseStudy.title} | Futureproof Case Study`,
+    title: `${caseStudy.title} | futureproof Case Study`,
     description: metaDescription,
     openGraph: {
       ...defaultOpenGraph,
-      title: `${caseStudy.title} | Futureproof Case Study`,
+      title: `${caseStudy.title} | futureproof Case Study`,
       description: metaDescription,
       url: `${siteConfig.url}/case-studies/${caseStudy.title.toLowerCase().replace(/\s+/g, '-')}`,
       type: 'article',
     },
     twitter: {
       ...defaultTwitter,
-      title: `${caseStudy.title} | Futureproof Case Study`,
+      title: `${caseStudy.title} | futureproof Case Study`,
       description: metaDescription,
     },
   }

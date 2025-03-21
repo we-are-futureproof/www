@@ -56,7 +56,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenge:
       "Knowspace needed to navigate the complex technical landscape of developing their real-time monitoring platform that processes millions of data points from IoT devices. They faced challenges in selecting appropriate technologies for their data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. Additionally, they needed guidance on hardware options, system architecture optimization, and implementing practical machine learning approaches for behavior recognition and fall detection.",
     solution:
-      "Futureproof provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
+      "futureproof provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
     results: [
       "Accelerated development timeline by avoiding costly experimentation with inappropriate technologies",
       "Reduced EMQX deployment complexity by 50% and costs by 90%",
@@ -65,7 +65,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     testimonial: {
       quote:
-        "Futureproof took a complicated technical problem and crafted a layperson's solution.  They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
+        "futureproof took a complicated technical problem and crafted a layperson's solution.  They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
       author: "Jack Burden, Founder and CEO, Knowspace",
     },
     services: ["Opportunity Assessment", "Vendor Evaluation", "Implementation Roadmap", "Pilot Execution"],
@@ -93,7 +93,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenge:
       "PEAK Sensor Systems needed to establish a marketing function that could effectively monitor competitive intelligence and generate content, but with limited resources and a need for quick implementation. They required a solution that could automatically gather industry news, identify market opportunities, and assist in content creation.",
     solution:
-      "Futureproof designed and built a new marketing function including a competitive marketing intelligence monitor and a content production pipeline. The solution was implemented using low-code and no-code platforms like Airbnb and n8n to quickly develop a usable application. We created an automated system that scans industry publications, analyzes content, and drafts preliminary marketing materials for human review.",
+      "futureproof designed and built a new marketing function including a competitive marketing intelligence monitor and a content production pipeline. The solution was implemented using low-code and no-code platforms like Airbnb and n8n to quickly develop a usable application. We created an automated system that scans industry publications, analyzes content, and drafts preliminary marketing materials for human review.",
     results: [
       "Thousands of articles per week are scanned for new and competitive opportunities automatically for pennies per day in operating costs",
       "Daily situational awareness report provides insight into competitive market activity",
@@ -102,7 +102,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     testimonial: {
       quote:
-        "Futureproof delivered a solid marketing intelligence system in record time. Their approach used lightweight, flexible tools that allowed us to get up and running quickly.",
+        "futureproof delivered a solid marketing intelligence system in record time. Their approach used lightweight, flexible tools that allowed us to get up and running quickly.",
       author: "Abe Uccello, Owner / Operator, PEAK Sensor Systems",
     },
     services: ["Opportunity Assessment", "Implementation Roadmap", "Pilot Execution"],

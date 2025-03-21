@@ -21,13 +21,13 @@ export interface Quote {
 export const quotes: Quote[] = [
   {
     "title": "",
-    "quote": "Futureproof drilled down to the essential pieces of our user relationship, properly assessed our technical understanding, and provided us with a platform that all stakeholders can succeed with in realtime operation. \n\nWe are excited to continue our AI integration with Futureproof, and look forward to their insights into our next generation offerings.",
+    "quote": "futureproof drilled down to the essential pieces of our user relationship, properly assessed our technical understanding, and provided us with a platform that all stakeholders can succeed with in realtime operation. \n\nWe are excited to continue our AI integration with futureproof, and look forward to their insights into our next generation offerings.",
     "author": "Founder & CEO",
     "company": "IoT Company",
     "paragraphs": [
       {
         "segments": [
-          { "text": "Futureproof drilled down to the "},
+          { "text": "futureproof drilled down to the "},
           { "text": "essential pieces of our user relationship, ", highlight: true },
           { "text": " properly assessed our technical understanding."},
         ]
@@ -39,18 +39,18 @@ export const quotes: Quote[] = [
       },
       {
         "segments": [
-          { "text": "We are excited to continue our AI integration with Futureproof, and look forward to their insights into our next generation offerings." }
+          { "text": "We are excited to continue our AI integration with futureproof, and look forward to their insights into our next generation offerings." }
         ]
       }
     ]
   },
   {
     "title": "Strategic Clarity",
-    "quote": "Futureproof transformed our understanding of AI by cutting through the hype and identifying practical applications for our business.\n\nTheir methodical approach provided a clear roadmap for implementing marketing automation, resulting in a structured plan with measurable objectives.",
+    "quote": "futureproof transformed our understanding of AI by cutting through the hype and identifying practical applications for our business.\n\nTheir methodical approach provided a clear roadmap for implementing marketing automation, resulting in a structured plan with measurable objectives.",
     "paragraphs": [
       {
         "segments": [
-          { "text": "Futureproof transformed our understanding of AI by " },
+          { "text": "futureproof transformed our understanding of AI by " },
           { "text": " cutting through the hype ", "highlight": true },
           { "text": " and identifying practical applications for our business." }
         ]
@@ -66,11 +66,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Technical Translation",
-    "quote": "Futureproof excels at demystifying complex AI concepts, making them accessible to our entire team.\n\nThey didn't just propose solutions; they equipped us with analytical frameworks to independently evaluate AI opportunities.\n\nOur technical support project moved from concept to implementation after just two strategic sessions.",
+    "quote": "futureproof excels at demystifying complex AI concepts, making them accessible to our entire team.\n\nThey didn't just propose solutions; they equipped us with analytical frameworks to independently evaluate AI opportunities.\n\nOur technical support project moved from concept to implementation after just two strategic sessions.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof excels at demystifying complex AI concepts, making them accessible to our entire team. " },
+          { "text": "futureproof excels at demystifying complex AI concepts, making them accessible to our entire team. " },
         ]
       },
       { 
@@ -91,11 +91,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Making Sense of AI",
-    "quote": "Before Futureproof, AI complexity had stalled our progress.\n\nTheir systematic approach provided both the technical knowledge and strategic confidence needed to tackle document automation.\n\nFutureproof fosters an environment where both technical and non-technical stakeholders can contribute.",
+    "quote": "Before futureproof, AI complexity had stalled our progress.\n\nTheir systematic approach provided both the technical knowledge and strategic confidence needed to tackle document automation.\n\nfutureproof fosters an environment where both technical and non-technical stakeholders can contribute.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Before Futureproof, AI complexity had stalled our progress. " },
+          { "text": "Before futureproof, AI complexity had stalled our progress. " },
         ]
       },
       { 
@@ -107,7 +107,7 @@ export const quotes: Quote[] = [
       },
       { 
         "segments": [
-          { "text": "Futureproof fosters an environment where both technical and non-technical stakeholders can contribute. " },
+          { "text": "futureproof fosters an environment where both technical and non-technical stakeholders can contribute. " },
         ]
       }
     ],
@@ -116,11 +116,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Problem Decomposition",
-    "quote": "Futureproof breaks AI complexity into actionable steps.\n\nWhen our sales training stalled due to scope complexity, their approach helped us identify immediate opportunities while aligning with strategic objectives.\n\nThey provided a comprehensive framework for AI adoption, beyond just implementation tactics.",
+    "quote": "futureproof breaks AI complexity into actionable steps.\n\nWhen our sales training stalled due to scope complexity, their approach helped us identify immediate opportunities while aligning with strategic objectives.\n\nThey provided a comprehensive framework for AI adoption, beyond just implementation tactics.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof breaks AI complexity into actionable steps. " },
+          { "text": "futureproof breaks AI complexity into actionable steps. " },
         ]
       },
       { 
@@ -141,11 +141,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Team Support",
-    "quote": "We valued Futureproof's focus on capability development rather than creating dependency.\n\nThey equipped our team with robust frameworks to independently evaluate and implement AI.\n\nTheir collaborative approach during our GIS visualization project helped us transfer knowledge and build competency.",
+    "quote": "We valued futureproof's focus on capability development rather than creating dependency.\n\nThey equipped our team with robust frameworks to independently evaluate and implement AI.\n\nTheir collaborative approach during our GIS visualization project helped us transfer knowledge and build competency.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "We valued Futureproof's focus on capability development rather than creating dependency. " },
+          { "text": "We valued futureproof's focus on capability development rather than creating dependency. " },
         ]
       },
       { 
@@ -166,11 +166,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Practical Perspective",
-    "quote": "Futureproof stands out by focusing on practicality over theory.\n\nThey helped us prioritize use cases for our customer support system based on quantifiable business value, not just technological novelty.\n\nTheir methodical approach transformed uncertainty into productive implementation momentum.",
+    "quote": "futureproof stands out by focusing on practicality over theory.\n\nThey helped us prioritize use cases for our customer support system based on quantifiable business value, not just technological novelty.\n\nTheir methodical approach transformed uncertainty into productive implementation momentum.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof "},
+          { "text": "futureproof "},
           { "text": " stands out by focusing on practicality over theory. " },
         ]
       },
@@ -192,11 +192,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Balanced Guidance",
-    "quote": "Futureproof provided an optimal balance of expert guidance and organizational autonomy as we explored AI applications for document processing workflows.\n\nThey established a productive environment for exploration and inquiry.\n\nWithin weeks, we moved from uncertainty to a implementation.",
+    "quote": "futureproof provided an optimal balance of expert guidance and organizational autonomy as we explored AI applications for document processing workflows.\n\nThey established a productive environment for exploration and inquiry.\n\nWithin weeks, we moved from uncertainty to a implementation.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof "},
+          { "text": "futureproof "},
           { "text": " provided an optimal balance of expert guidance and organizational autonomy ", highlight: true},
           { "text": " as we explored AI applications for document processing workflows. " },
         ]
@@ -217,11 +217,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Thoughtful Questioning",
-    "quote": "Engaging with Futureproof transformed our approach to technical challenges.\n\nThrough strategic questioning and systematic analysis, they ensured we addressed the right problems with our marketing content system.\n\nTheir methodical process aligned technical and business stakeholders around a unified strategic vision.",
+    "quote": "Engaging with futureproof transformed our approach to technical challenges.\n\nThrough strategic questioning and systematic analysis, they ensured we addressed the right problems with our marketing content system.\n\nTheir methodical process aligned technical and business stakeholders around a unified strategic vision.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Engaging with Futureproof transformed our approach to technical challenges. " },
+          { "text": "Engaging with futureproof transformed our approach to technical challenges. " },
         ]
       },
       { 
@@ -242,11 +242,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Learning Acceleration",
-    "quote": "Futureproof's methodology accelerated our AI adoption.\n\nOur team now employs a structured process for evaluating and prioritizing AI opportunities.\n\nTheir expert guidance and strategic problem-solving during our sales training automation project established the foundation for independent advancement.",
+    "quote": "futureproof's methodology accelerated our AI adoption.\n\nOur team now employs a structured process for evaluating and prioritizing AI opportunities.\n\nTheir expert guidance and strategic problem-solving during our sales training automation project established the foundation for independent advancement.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "Futureproof's methodology accelerated our AI adoption. " },
+          { "text": "futureproof's methodology accelerated our AI adoption. " },
         ]
       },
       { 
@@ -267,11 +267,11 @@ export const quotes: Quote[] = [
   },
   {
     "title": "Collaborative Discovery",
-    "quote": "The primary value of Futureproof's consultation extended beyond technical expertise to their structured discovery methodology.\n\nThey demonstrated that our GIS visualization challenge required refining decision processes rather than technological implementation.\n\nTheir analytical approach transformed our organization.",
+    "quote": "The primary value of futureproof's consultation extended beyond technical expertise to their structured discovery methodology.\n\nThey demonstrated that our GIS visualization challenge required refining decision processes rather than technological implementation.\n\nTheir analytical approach transformed our organization.",
     "paragraphs": [
       { 
         "segments": [
-          { "text": "The primary value of Futureproof's consultation extended beyond technical expertise to their " },
+          { "text": "The primary value of futureproof's consultation extended beyond technical expertise to their " },
           { "text": " structured discovery methodology. ", "highlight": true },
         ]
       },
