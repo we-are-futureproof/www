@@ -50,7 +50,7 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               <br className="hidden md:block" /><span className="inline"> • </span>
               <strong>80+ enterprise clients</strong> including six of the Fortune 100
               <br className="hidden md:block" /><span className="inline"> • </span>
-              <strong>4 SMBs</strong> achieved implementation within 3 weeks
+              <strong>4 Small / Medium Businesses (SMBs)</strong> achieved implementation within 3 weeks
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 py-2 sm:py-3 md:py-4 pl-0 sm:pl-2">
               AI is already transforming your industry. <br className="hidden sm:block" />
