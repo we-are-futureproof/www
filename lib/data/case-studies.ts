@@ -117,7 +117,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       alt: "Minimalist line drawing of a dashboard - representing PEAK's marketing intelligence system",
       detailPosition: {
         sm: "center -70px",
-        md: "center -170px",
+        md: "center -70px",
         default: "center -70px"  // Fallback
       },
       listPosition: "center center"

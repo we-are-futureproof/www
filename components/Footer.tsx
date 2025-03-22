@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           <div className="col-span-2 md:col-span-1 mb-4 md:mb-0">
-            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">WE ARE FUTUREPROOF</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">We are futureproof</h3>
             <p className="mb-3 md:mb-4 text-sm md:text-base">And you should be too</p>
             <p className="text-sm md:text-base mt-10 py-3 border-y border-white/50 border-y-[0.5px]">AI strategy for business performance.</p>
           </div>
@@ -58,11 +58,16 @@ export default function Footer() {
                   Knowspace
                 </Link>
               </li>
+              <li>
+                <Link href="/case-studies/peak-sensor-systems" className="hover:underline inline-block py-0.5">
+                  PEAK Sensor Systems
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
         <div className="mt-4 md:mt-12 pt-4 md:pt-8 border-t border-gray-800 text-xs md:text-sm">
-          <p>© {new Date().getFullYear()} FUTUREPROOF. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} futureproof. All rights reserved.</p>
         </div>
       </div>
     </footer>

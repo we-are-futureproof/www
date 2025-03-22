@@ -15,7 +15,7 @@ export default function Header() {
     <header className="border-b border-black relative z-20">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
-          WE ARE FUTUREPROOF
+          we are futureproof
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link href="/services" className="hover:underline">
