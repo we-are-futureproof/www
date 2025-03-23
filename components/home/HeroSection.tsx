@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import Button from "../Button"
 import TestimonialCarousel from "../TestimonialCarousel"
 import { Quote } from "../../lib/quotes"
+import { heroHooks, HeroHook } from '@/lib/data/hero-hooks';
 
 interface HeroSectionProps {
   heroQuotes: Quote[]
@@ -12,22 +13,51 @@ interface HeroSectionProps {
 
 export default function HeroSection({ heroQuotes }: HeroSectionProps) {
   const [showImage, setShowImage] = useState(true)
-  
+  const [mobileTeaserText, setMobileTeaserText] = useState<HeroHook | null>(null);
+  const [trackingId, setTrackingId] = useState<string | null>(null);
+
   // Effect to handle the image fade out after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowImage(false)
-    }, 3000) // 3 seconds
-    
+    }, 3000)
     return () => clearTimeout(timer)
   }, [])
+
+  useEffect(() => {
+    // Randomly select a teaser text on component mount
+    const randomIndex = Math.floor(Math.random() * heroHooks.length);
+    const selectedHook = heroHooks[randomIndex];
+    setMobileTeaserText(selectedHook);
+    setTrackingId(selectedHook.id);
+  }, []);
+
+  // Construct Cal.com booking URL with optional tracking parameter
+  const calComBookingUrl = mobileTeaserText 
+    ? `https://cal.com/amgando/free-strategy-call${window.innerWidth < 768 ? `?t=${trackingId}` : '?t=www'}` 
+    : 'https://cal.com/amgando/free-strategy-call?t=www';
 
   return (
     <section className="border-b border-black">
       <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
         <div className="flex flex-col xl:flex-row items-start gap-6 sm:gap-8 md:gap-12">
           <div className="w-full xl:w-3/5">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin mb-4 sm:mb-6 md:mb-8 leading-tight">
+            {/* Mobile headline */}
+            <h1 className="block md:hidden text-2xl sm:text-3xl font-thin mb-4 sm:mb-6 leading-tight">
+              From AI Complexity
+              <br />
+              to <span className="font-sans font-bold tracking-wide text-gray-800 font-thin text-4xl">ai simplicity</span>
+            </h1>
+
+            {/* Mobile teaser text */}
+            {mobileTeaserText && (
+              <p className="block md:hidden text-base text-gray-600 mb-6 leading-relaxed">
+                {mobileTeaserText.text}
+              </p>
+            )}
+
+            {/* Desktop headline */}
+            <h1 className="hidden md:block text-4xl lg:text-5xl font-thin mb-6 md:mb-8 leading-tight">
               From AI Complexity
               <br />
               <span className="font-sans font-bold tracking-wide text-gray-800">to Competitive Advantage</span>
@@ -36,13 +66,13 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               End the overwhelm. <br className="block md:hidden" />See results <span className='bg-green-200'>within days</span>.
             </p>
             <Button
-              href="https://cal.com/amgando/free-strategy-call"
+              href={calComBookingUrl}
               variant="primary"
               size="large"
               fullWidth={true}
               className="rounded-md sm:w-auto sm:justify-start"
             >
-              BOOK A (free) STRATEGY CALL
+              BOOK A <span className="hidden md:inline">&nbsp;(free)&nbsp;</span>STRATEGY CALL
               <ArrowRight className="ml-2" />
             </Button>
             <p className="mt-4 xl:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
