@@ -13,18 +13,17 @@ interface ServicePageProps {
     slug: string
   }>
 }
-
 export default function ServicePage({ params }: ServicePageProps) {
 
   const services = {
     "ai-opportunity-assessment": {
       title: "AI Opportunity Assessment",
       description:
-        "Systematic analysis that cuts through AI hype to pinpoint where automation and intelligence can deliver immediate ROI for specific operational workflows and business challenges. This collaborative assessment creates a prioritized opportunity map that matches AI capabilities to business goals while accounting for implementation complexity, resource requirements, and organizational readiness.",
+        "Structured analysis that clearly identifies high-value AI opportunities where automation and intelligence can deliver immediate ROI for specific operational workflows and business challenges. This collaborative assessment creates a prioritized opportunity map that matches AI capabilities to business goals while accounting for implementation complexity, resource requirements, and organizational readiness.",
       benefits: [
-        "Clear visibility into the highest-impact, lowest-risk AI implementation opportunities ranked by potential ROI, implementation complexity, and alignment with strategic business objectives.",
+        "Clear visibility into actionable, high-impact AI implementation opportunities ranked by potential ROI, implementation complexity, and alignment with strategic business objectives.",
         "Confidence in technology investment decisions backed by evidence-based analysis of specific operational workflows rather than generic industry trends or competitive pressure.",
-        "Elimination of wasted resources on inappropriate AI applications through early identification of prerequisites, technical constraints, and organizational readiness factors specific to each potential implementation area.",
+        "Prevention of wasted resources through early identification of realistic, relevant AI use-cases tailored to your operations, including prerequisites, technical constraints, and organizational readiness factors.",
       ],
       scenarios: [
         "Business leaders are bombarded with competing AI vendor claims and industry success stories but lack a framework to evaluate which applications are genuinely relevant to their specific operational bottlenecks, causing decision paralysis or rushed investments into trendy solutions that fail to address core business needs.",
@@ -42,77 +41,77 @@ export default function ServicePage({ params }: ServicePageProps) {
     "ai-readiness-assessment": {
       title: "AI Readiness",
       description:
-        "Comprehensive diagnostic process that evaluates a company's current capabilities, infrastructure, and business processes to determine optimal starting points for AI adoption. This assessment establishes baseline readiness metrics and prioritizes potential AI initiatives based on implementation feasibility, resource requirements, and projected business impact.",
+        "Detailed evaluation of your organization's current capabilities and processes to clearly define optimal starting points and realistic pathways for successful AI adoption. This assessment establishes baseline readiness metrics and prioritizes potential AI initiatives based on implementation feasibility, resource requirements, and projected business impact.",
       benefits: [
-        "Clearly prioritized AI opportunities mapped to specific business objectives with realistic implementation timelines that maximize early wins while building organizational momentum and confidence.",
-        "Accurate understanding of technical and organizational readiness gaps with specific remediation plans that prevent costly implementation failures and ensure sustainable adoption.",
-        "Calibrated expectations across leadership teams with consensus on resource allocation, success metrics, and governance frameworks that align AI initiatives with strategic business priorities.",
+        "Clearly prioritized AI opportunities mapped to specific business objectives with realistic implementation timelines that maximize early wins and build organizational momentum.",
+        "Detailed understanding of readiness gaps with actionable recommendations, ensuring successful AI implementations.",
+        "Aligned leadership expectations and clear consensus on resource allocation, success metrics, and governance frameworks.",
       ],
       scenarios: [
-        "Business leaders feel paralyzed by conflicting AI information and vendor claims, leading to decision fatigue, missed competitive opportunities, and growing anxiety about falling behind more technologically advanced competitors in their industry segment.",
-        "Internal IT teams lack specialized AI knowledge, causing failed pilot projects, wasted technology investments, and growing skepticism among department heads about the practical value of AI for their specific operational challenges.",
-        "Leadership teams make impulsive AI purchasing decisions based on competitor announcements or industry buzz, resulting in underutilized tools, employee resistance, and diminished appetite for future innovation initiatives.",
+        "Business leaders feel paralyzed by conflicting AI information and vendor claims, leading to decision fatigue, missed competitive opportunities, and anxiety about technological lag.",
+        "Internal IT teams lack specialized AI knowledge, causing failed pilots, wasted investments, and skepticism about AI's practical value.",
+        "Leadership makes impulsive AI purchases based on industry buzz, leading to underutilized tools, employee resistance, and diminished innovation appetite.",
       ],
       process: [
-        "Initial discovery session to understand your business objectives, current technical capabilities, and specific industry challenges.",
-        "Comprehensive assessment of your data infrastructure, technical systems, and organizational processes.",
-        "Analysis of potential AI use cases specific to your business with prioritization based on impact, feasibility, and resource requirements.",
-        "Development of a detailed readiness report with specific recommendations for addressing gaps and maximizing opportunities.",
-        "Presentation of findings to leadership team with clear next steps and implementation roadmap.",
+        "Initial discovery session to clarify business objectives, technical capabilities, and industry challenges.",
+        "Comprehensive assessment of data infrastructure, technical systems, and organizational processes.",
+        "Prioritized analysis of potential AI use cases based on impact, feasibility, and resource needs.",
+        "Detailed readiness report with specific gap-closing recommendations.",
+        "Leadership presentation with actionable next steps and implementation roadmap.",
       ],
     },
     "ai-implementation-roadmap": {
       title: "AI Roadmap",
       description:
-        "Development of comprehensive, customized implementation plans that sequence AI initiatives based on business impact, technical feasibility, and organizational readiness factors specific to mid-market companies. These tailored roadmaps establish clear milestones, resource requirements, and success metrics while identifying potential obstacles and mitigation strategies across each phase of adoption.",
+        "Customized strategic implementation plans that prioritize AI initiatives for maximum impact, feasibility, and organizational readiness. Tailored roadmaps establish clear milestones, resource requirements, and success metrics, while proactively identifying potential obstacles and mitigation strategies.",
       benefits: [
-        "Accelerated time-to-value through strategically sequenced implementation priorities that deliver early wins, build organizational momentum, and fund subsequent initiatives through realized efficiency gains.",
-        "Reduced implementation failures by identifying and addressing potential technical integration challenges, data quality issues, and change management requirements before significant resources are committed.",
-        "Enhanced budget efficiency by establishing clear decision criteria for technology investments that prevent redundant purchases and ensure solutions align with both immediate needs and long-term strategic direction.",
+        "Accelerated ROI through strategic sequencing of AI initiatives for rapid value creation.",
+        "Reduced risks and enhanced implementation success by proactively identifying technical and organizational challenges.",
+        "Enhanced budget efficiency through clear decision criteria for technology investments, aligning immediate needs with long-term strategic direction.",
       ],
       scenarios: [
-        "A manufacturing company has identified several potential AI applications but lacks internal expertise to prioritize opportunities, resulting in stalled decision-making as leadership debates which initiatives to pursue first while competitors gain market advantage through more decisive action.",
-        "A professional services firm implemented an AI-powered customer service solution without proper integration planning, creating data silos and workflow disruptions that decreased productivity and damaged client relationships, leaving management hesitant about further technology investments.",
-        "A regional retailer's marketing team purchased multiple AI tools with overlapping capabilities based on individual department requests rather than coordinated strategy, creating budget waste, staff confusion, and inconsistent customer experiences across digital touchpoints.",
+        "Manufacturers lacking internal expertise face stalled AI adoption, losing competitive ground.",
+        "Professional services firms experience integration failures leading to workflow disruptions and lost productivity.",
+        "Retailers make uncoordinated AI investments, resulting in wasted resources and inconsistent customer experiences.",
       ],
       process: [
-        "Comprehensive review of business objectives, current technical infrastructure, and organizational capabilities.",
-        "Identification and prioritization of potential AI initiatives based on business impact, technical feasibility, and organizational readiness.",
-        "Development of a phased implementation plan with clear milestones, resource requirements, and success metrics.",
-        "Creation of risk mitigation strategies for potential technical, organizational, and change management challenges.",
-        "Establishment of governance frameworks and decision criteria for ongoing AI investment and expansion.",
+        "Review of business objectives, technical infrastructure, and organizational capabilities.",
+        "Prioritization of AI initiatives based on impact, feasibility, and readiness.",
+        "Development of phased implementation plans with milestones, resources, and success metrics.",
+        "Creation of risk mitigation strategies for technical, organizational, and change management challenges.",
+        "Governance frameworks and decision criteria for sustained AI investment.",
       ],
     },
     "ai-vendor-selection": {
       title: "AI Vendor Selection",
       description:
-        "Systematic approach for evaluating AI vendors against customized criteria that reflect actual business requirements rather than trending technologies. This framework transforms vendor selection from a confusing technical comparison into a strategic business decision process with clear metrics for measuring fit, implementation feasibility, and long-term value.",
+        "Structured evaluation of AI vendors against business-driven criteria to ensure strategic alignment and maximum value. This framework turns vendor selection into a strategic business decision with clear metrics for measuring fit, feasibility, and long-term value.",
       benefits: [
-        "Confident investment decisions backed by transparent evaluation criteria that align vendor capabilities with specific operational needs rather than industry buzzwords or competitor actions.",
-        "Accelerated implementation timelines through early identification of integration requirements, data readiness gaps, and necessary organizational changes during the vendor selection process.",
-        "Stronger negotiating position with vendors through detailed understanding of feature relevance, actual implementation costs, and realistic performance expectations for your specific business context.",
+        "Confident vendor selection through transparent, business-aligned evaluation criteria.",
+        "Accelerated implementation through early identification of integration and operational requirements.",
+        "Stronger vendor negotiations through detailed feature relevance analysis and realistic performance expectations.",
       ],
       scenarios: [
-        "Decision paralysis has set in as leadership reviews contradictory claims from multiple AI vendors, each promising transformative results but using technical jargon that obscures actual capabilities and implementation requirements for non-technical stakeholders.",
-        "Previous technology investments have underdelivered after vendors overpromised capabilities, creating organizational skepticism about AI adoption and requiring extra diligence to rebuild confidence in the selection process.",
-        "Internal teams lack specialized knowledge to distinguish between essential and premium AI features, resulting in either overspending on unnecessary capabilities or selecting underpowered solutions that fail to address core business challenges.",
+        "Leaders facing vendor-induced decision paralysis due to confusing AI claims.",
+        "Previous vendor disappointments leading to skepticism and rigorous selection requirements.",
+        "Internal teams unable to discern essential AI features, leading to overspending or underpowered solutions.",
       ],
       process: [
-        "Development of customized evaluation criteria based on specific business requirements and technical constraints.",
-        "Creation of a structured vendor assessment framework with weighted scoring across technical, operational, and financial dimensions.",
-        "Facilitation of vendor demonstrations and technical evaluations focused on your specific use cases rather than generic capabilities.",
-        "Analysis of integration requirements, implementation timelines, and total cost of ownership for each potential solution.",
-        "Preparation of detailed comparison reports with clear recommendations and implementation considerations.",
+        "Customized vendor evaluation criteria aligned with business and technical needs.",
+        "Structured vendor assessments across technical, operational, and financial dimensions.",
+        "Targeted vendor demonstrations based on specific business use cases.",
+        "Analysis of integration requirements, timelines, and total cost of ownership.",
+        "Detailed comparative reports with implementation recommendations.",
       ],
     },
     "phased-ai-pilot-execution": {
       title: "AI Pilot",
       description:
-        "A structured approach to testing AI solutions through controlled, measurable pilot projects that minimize risk while demonstrating practical value in specific business contexts. This methodical process enables businesses to gather evidence, refine implementation strategies, and build organizational confidence before expanding AI initiatives.",
+        "Controlled, measurable pilot projects to minimize risk, validate practical AI value, and establish a strong foundation for broader adoption. This structured process enables organizations to gather evidence, refine implementation strategies, and build organizational confidence before expanding AI initiatives.",
       benefits: [
-        "Evidence-based confidence in AI investment decisions backed by quantifiable results from controlled experiments that demonstrate specific operational improvements relevant to business objectives.",
+        "Data-driven validation of AI investments through controlled pilot projects demonstrating clear operational improvements.",
         "Refined implementation strategies informed by real-world testing that address integration challenges, workflow adjustments, and employee training needs before broader deployment.",
-        "Organizational momentum and stakeholder buy-in generated through visible wins from successful pilots that overcome skepticism and build enthusiasm for expanded AI initiatives.",
+        "Strong stakeholder buy-in and organizational confidence generated by visible, measurable pilot successes.",
       ],
       scenarios: [
         "A retail business owner has identified inventory management as a potential AI application area but fears wasting resources on an enterprise-wide rollout that might disrupt existing operations or fail to deliver promised efficiency gains.",
@@ -127,29 +126,30 @@ export default function ServicePage({ params }: ServicePageProps) {
         "Comprehensive evaluation of pilot results with recommendations for refinement, expansion, or alternative approaches.",
       ],
     },
-    "ai-education-simplification": {
-      title: "AI Education",
+    "ai-impact-assessment": {
+      title: "AI Impact & ROI",
       description:
-        "Bridging the knowledge gap between technical AI concepts and practical business applications through personalized educational frameworks tailored to specific industry contexts and technical literacy levels. This structured approach transforms information overload into actionable insights, enabling business leaders to distinguish between practical AI applications and marketing hype.",
+        "The AI Impact & ROI phase validates AI outcomes, quantifies ROI, and ensures knowledge transfer, positioning your team for sustained success and confident future innovation.",
       benefits: [
-        "Confident leadership discussions about AI strategy grounded in practical understanding rather than abstract concepts, enabling more productive conversations with technical teams, vendors, and stakeholders about specific implementation possibilities.",
-        "Accelerated evaluation processes where decision-makers can quickly distinguish between relevant AI capabilities and marketing hype, focusing attention on solutions with genuine potential for their specific business context.",
-        "Seamless translation between business challenges and technical AI capabilities, allowing organizations to precisely articulate requirements and evaluate proposed solutions based on substantive criteria rather than superficial features.",
+        "Clear ROI validation ensuring transparency and accountability.",
+        "Comprehensive knowledge transfer empowering internal teams.",
+        "Structured support frameworks for sustained momentum and future advisory engagements.",
       ],
       scenarios: [
-        "Business owners spending countless hours sifting through contradictory online resources, vendor materials, and industry publications about AI, resulting in decision paralysis and missed competitive opportunities while their understanding remains fragmented and superficial.",
-        "Leadership teams making uninformed judgments about AI technologies based on buzzwords rather than substance, leading to skepticism from technically-savvy employees and resistance to potentially valuable innovations that could address genuine operational challenges.",
-        "Department heads unable to effectively communicate AI requirements to technical teams or vendors because they lack the vocabulary and conceptual framework to articulate business needs in terms that translate to appropriate technical solutions.",
+        "Stakeholders uncertain of AI investment value, risking future innovation budgets.",
+        "Operational teams struggling post-consultant departure, resulting in stalled AI initiatives.",
+        "Organizations lacking follow-up strategies post-implementation, leading to dependency and knowledge gaps.",
       ],
       process: [
-        "Assessment of current AI knowledge levels and specific learning objectives across key stakeholders.",
-        "Development of customized educational frameworks tailored to your industry context and business priorities.",
-        "Delivery of targeted learning sessions that connect technical concepts to practical business applications relevant to your specific challenges.",
-        "Creation of reference materials and decision frameworks that support ongoing evaluation of AI opportunities and vendor claims.",
-        "Establishment of common vocabulary and conceptual models that facilitate productive discussions between business and technical stakeholders.",
+        "Retrospective ROI assessments aligned with business objectives.",
+        "Structured handoff workshops and comprehensive documentation.",
+        "Outcome-validation checkpoints post-implementation.",
+        "Recommendations for continuous improvement and future scaling.",
+        "Frameworks for ongoing advisory engagements to ensure sustained value.",
       ],
     },
   }
+
 
   // Unwrap params using React.use()
   const resolvedParams = use(params)
@@ -200,7 +200,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 {service.scenarios.map((scenario, index) => (
                   <li key={index} className="flex items-start">
                     <span className="font-bold mr-4">{index + 1}.</span>
-                    <p>{scenario}</p>
+                    <p className="font-sans">{scenario}</p>
                   </li>
                 ))}
               </ul>
@@ -210,7 +210,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 {service.process.map((step, index) => (
                   <li key={index} className="flex items-start">
                     <span className="font-bold mr-4">{index + 1}.</span>
-                    <p>{step}</p>
+                    <p className="font-sans">{step}</p>
                   </li>
                 ))}
               </ul>
@@ -222,7 +222,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 {service.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
                     <span className="font-bold mr-4">•</span>
-                    <p>{benefit}</p>
+                    <p className="font-sans">{benefit}</p>
                   </li>
                 ))}
               </ul>

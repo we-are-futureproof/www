@@ -57,14 +57,14 @@ export default function CaseStudiesPage() {
                       <h3 className="text-xl font-bold mb-3">RESULTS</h3>
                       <ul className="space-y-2 mb-6">
                         {caseStudy.results.map((result, i) => (
-                          <li key={i}>• {result}</li>
+                          <li key={i} className="font-sans">• {result}</li>
                         ))}
                       </ul>
 
                       <h3 className="text-xl font-bold mb-3">SERVICES USED</h3>
                       <ul className="space-y-2 mb-6">
                         {caseStudy.services.map((service, i) => (
-                          <li key={i}>• {service}</li>
+                          <li key={i} className="font-sans">• {service}</li>
                         ))}
                       </ul>
                     </div>

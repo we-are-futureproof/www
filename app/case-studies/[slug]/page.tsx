@@ -91,17 +91,17 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               <p className="text-xl mb-8">{caseStudy.description}</p>
 
               <h3 className="text-2xl font-bold mb-4">THE CHALLENGE</h3>
-              <p className="mb-8">{caseStudy.challenge}</p>
+              <p className="mb-8 font-sans">{caseStudy.challenge}</p>
 
               <h3 className="text-2xl font-bold mb-4">OUR SOLUTION</h3>
-              <p className="mb-8">{caseStudy.solution}</p>
+              <p className="mb-8 font-sans">{caseStudy.solution}</p>
 
               <h3 className="text-2xl font-bold mb-4">RESULTS</h3>
               <ul className="space-y-4 mb-8">
                 {caseStudy.results.map((result, index) => (
                   <li key={index} className="flex items-start">
                     <span className="font-bold mr-4">•</span>
-                    <p>{result}</p>
+                    <p className="font-sans">{result}</p>
                   </li>
                 ))}
               </ul>
@@ -121,7 +121,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {caseStudy.services.map((service, index) => (
                     <li key={index} className="flex items-start">
                       <span className="font-bold mr-4">•</span>
-                      <p>{service}</p>
+                      <p className="font-sans">{service}</p>
                     </li>
                   ))}
                 </ul>
@@ -133,7 +133,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {caseStudy.technologies.map((tech, index) => (
                     <li key={index} className="flex items-start">
                       <span className="font-bold mr-4">•</span>
-                      <p>{tech}</p>
+                      <p className="font-sans">{tech}</p>
                     </li>
                   ))}
                 </ul>

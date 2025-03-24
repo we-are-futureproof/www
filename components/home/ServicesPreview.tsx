@@ -20,32 +20,32 @@ const SERVICE_ITEMS: ServiceItem[] = [
   {
     title: "Readiness",
     description:
-      "Evaluate your company's current capabilities, infrastructure, and business processes to determine optimal starting points for AI adoption.",
+    "Evaluate your organization's current capabilities and processes to define the best starting points and pathways for successful AI adoption.",
     link: "/services/ai-readiness-assessment",
   },
   {
     title: "Roadmap",
     description:
-      "Develop comprehensive, customized implementation plans that sequence AI initiatives based on business impact and technical feasibility.",
+      "Develop a customized strategic implementation plan that prioritizes for maximum impact, feasibility, and organizational readiness.",
     link: "/services/ai-implementation-roadmap",
   },
   {
     title: "Selection",
     description:
-      "Evaluate AI vendors against customized criteria that reflect actual business requirements rather than trending technologies.",
+    "Evaluate AI vendors against business-driven criteria to ensure strategic alignment and maximum value.",
     link: "/services/ai-vendor-selection",
   },
   {
     title: "Pilot",
     description:
-      "Test AI solutions through controlled, measurable pilot projects that minimize risk while demonstrating practical value.",
+      "Test-drive AI using controlled, measurable pilot projects to minimize risk, validate practical AI value, and establish a strong foundation for broader adoption.",
     link: "/services/phased-ai-pilot-execution",
   },
   {
-    title: "Education",
+    title: "Impact",
     description:
-      "Bridge the knowledge gap between technical AI concepts and practical business applications through personalized educational frameworks.",
-    link: "/services/ai-education-simplification",
+      "Validate and maximize the value of your AI initiatives through comprehensive outcome assessment, ROI confirmation, and targeted knowledge transfer to ensure lasting success.",
+    link: "/services/ai-impact-assessment",
   },
 ]
 

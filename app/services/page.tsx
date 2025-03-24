@@ -15,11 +15,11 @@ export default function ServicesPage() {
       id: "ai-opportunity-assessment",
       title: "Opportunity",
       description:
-        "Systematic analysis that cuts through AI hype to pinpoint where automation and intelligence can deliver immediate ROI for specific operational workflows and business challenges.",
+        "Structured analysis that clearly identifies high-value AI opportunities where automation and intelligence can deliver immediate ROI for specific operational workflows and business challenges.",
       benefits: [
-        "Clear visibility into the highest-impact, lowest-risk AI implementation opportunities.",
+        "Clear visibility into actionable, high-impact AI implementation opportunities.",
         "Confidence in technology investment decisions backed by evidence-based analysis.",
-        "Elimination of wasted resources on inappropriate AI applications.",
+        "Prevention of wasted resources through early identification of realistic, relevant AI use-cases tailored to your operations.",
       ],
       link: "/services/ai-opportunity-assessment",
     },
@@ -27,11 +27,11 @@ export default function ServicesPage() {
       id: "ai-readiness-assessment",
       title: "Readiness",
       description:
-        "Comprehensive diagnostic process that evaluates a company's current capabilities, infrastructure, and business processes to determine optimal starting points for AI adoption.",
+        "Detailed evaluation of your organization's current capabilities and processes to clearly define optimal starting points and realistic pathways for successful AI adoption.",
       benefits: [
         "Clearly prioritized AI opportunities mapped to specific business objectives with realistic implementation timelines.",
-        "Accurate understanding of technical and organizational readiness gaps with specific remediation plans.",
-        "Calibrated expectations across leadership teams with consensus on resource allocation and success metrics.",
+        "Detailed understanding of readiness gaps with actionable recommendations, ensuring successful AI implementations.",
+        "Aligned leadership expectations and clear consensus on resource allocation and success metrics.",
       ],
       link: "/services/ai-readiness-assessment",
     },
@@ -41,8 +41,8 @@ export default function ServicesPage() {
       description:
         "Development of comprehensive, customized implementation plans that sequence AI initiatives based on business impact, technical feasibility, and organizational readiness factors.",
       benefits: [
-        "Accelerated time-to-value through strategically sequenced implementation priorities.",
-        "Reduced implementation failures by identifying and addressing potential technical integration challenges.",
+        "Accelerated ROI through strategic sequencing of AI initiatives for rapid value creation.",
+        "Reduced implementation failures by identifying and addressing potential technical challenges.",
         "Enhanced budget efficiency by establishing clear decision criteria for technology investments.",
       ],
       link: "/services/ai-implementation-roadmap",
@@ -51,10 +51,10 @@ export default function ServicesPage() {
       id: "ai-vendor-selection",
       title: "Selection",
       description:
-        "Systematic approach for evaluating AI vendors against customized criteria that reflect actual business requirements rather than trending technologies.",
+        "Structured evaluation of AI vendors against business-driven criteria to ensure strategic alignment and maximum value.",
       benefits: [
-        "Confident investment decisions backed by transparent evaluation criteria.",
-        "Accelerated implementation timelines through early identification of integration requirements.",
+        "Confident vendor selection decisions through transparent, business-aligned evaluation criteria.",
+        "Accelerated implementation through early identification of integration and operational requirements.",
         "Stronger negotiating position with vendors through detailed understanding of feature relevance.",
       ],
       link: "/services/ai-vendor-selection",
@@ -63,25 +63,25 @@ export default function ServicesPage() {
       id: "phased-ai-pilot-execution",
       title: "Pilot",
       description:
-        "A structured approach to testing AI solutions through controlled, measurable pilot projects that minimize risk while demonstrating practical value in specific business contexts.",
+        "Controlled, measurable pilot projects to minimize risk, validate practical AI value, and establish a strong foundation for broader adoption.",
       benefits: [
-        "Evidence-based confidence in AI investment decisions backed by quantifiable results.",
+        "Data-driven validation of AI investments through controlled pilot projects demonstrating clear operational improvements.",
         "Refined implementation strategies informed by real-world testing.",
-        "Organizational momentum and stakeholder buy-in generated through visible wins.",
+        "Strong stakeholder buy-in and organizational confidence generated by visible, measurable pilot successes.",
       ],
       link: "/services/phased-ai-pilot-execution",
     },
     {
-      id: "ai-education-simplification",
-      title: "Education",
+      id: "ai-impact-assessment",
+      title: "Impact",
       description:
-        "Bridging the knowledge gap between technical AI concepts and practical business applications through personalized educational frameworks.",
+        "Ensure sustainable success of AI initiatives with structured ROI validation, comprehensive outcome reviews, and empowering knowledge transfer.",
       benefits: [
-        "Confident leadership discussions about AI strategy grounded in practical understanding.",
-        "Accelerated evaluation processes where decision-makers can quickly distinguish between relevant AI capabilities and marketing hype.",
-        "Seamless translation between business challenges and technical AI capabilities.",
+        "Clear confirmation of AI project outcomes through structured ROI and performance metric assessments.",
+        "Empowered internal teams equipped with knowledge and tools for sustainable AI operation and continuous improvement.",
+        "Strategically positioned to build upon demonstrated successes with clear pathways for future innovation.",
       ],
-      link: "/services/ai-education-simplification",
+      link: "/services/ai-impact-assessment",
     },
   ]
 
@@ -134,12 +134,12 @@ export default function ServicesPage() {
                 
                 {/* Row 3: Benefits - grows to fill remaining space */}
                 <div className="flex-grow mt-8">
-                  <h3 className="text-sm font-bold mb-4">BENEFITS</h3>
+                  <h3 className="text-sm font-bold mb-4 font-sans">BENEFITS</h3>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, i) => (
                       <li key={i} className="text-sm flex items-start">
                         <span className="font-bold mr-2">{i + 1}.</span>
-                        <p>{benefit}</p>
+                        <p className="font-sans">{benefit}</p>
                       </li>
                     ))}
                   </ul>

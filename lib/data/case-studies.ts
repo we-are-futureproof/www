@@ -65,7 +65,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     testimonial: {
       quote:
-        "futureproof took a complicated technical problem and crafted a layperson's solution.  They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
+        "futureproof took a complicated technical problem and crafted a layperson's solution. They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
       author: "Jack Burden, Founder and CEO, Knowspace",
     },
     services: ["Opportunity Assessment", "Vendor Selection", "Implementation Roadmap", "Pilot Execution"],

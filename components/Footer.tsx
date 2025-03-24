@@ -39,8 +39,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-education-simplification" className="hover:underline inline-block py-0.5">
-                  Education
+                <Link href="/services/ai-impact-assessment" className="hover:underline inline-block py-0.5">
+                  Impact
                 </Link>
               </li>
             </ul>
