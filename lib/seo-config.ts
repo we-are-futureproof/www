@@ -15,7 +15,7 @@ export const siteConfig = {
     'AI strategy', 
     'technology consulting', 
     'AI roadmap', 
-    'AI vendor evaluation', 
+    'AI vendor selection', 
     'AI pilot execution'
   ],
   ogImage: '/futureproof-meta.png',

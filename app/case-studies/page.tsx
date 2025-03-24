@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
               <span className="font-sans font-bold tracking-wide text-gray-800">with Measurable Results</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 md:mb-14 max-w-2xl">
-              Real-world examples of how we've helped businesses navigate the <span className='bg-green-200'>complex AI landscape</span> and implement
+              Real-world examples of how we've helped businesses <span className='bg-green-200'>navigate the complex AI landscape</span> and implement
               practical solutions that deliver measurable results.
             </p>
           </div>

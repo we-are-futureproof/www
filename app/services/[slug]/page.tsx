@@ -83,8 +83,8 @@ export default function ServicePage({ params }: ServicePageProps) {
         "Establishment of governance frameworks and decision criteria for ongoing AI investment and expansion.",
       ],
     },
-    "ai-vendor-evaluation": {
-      title: "AI Evaluation",
+    "ai-vendor-selection": {
+      title: "AI Vendor Selection",
       description:
         "Systematic approach for evaluating AI vendors against customized criteria that reflect actual business requirements rather than trending technologies. This framework transforms vendor selection from a confusing technical comparison into a strategic business decision process with clear metrics for measuring fit, implementation feasibility, and long-term value.",
       benefits: [

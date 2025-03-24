@@ -56,7 +56,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenge:
       "Knowspace needed to navigate the complex technical landscape of developing their real-time monitoring platform that processes millions of data points from IoT devices. They faced challenges in selecting appropriate technologies for their data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. Additionally, they needed guidance on hardware options, system architecture optimization, and implementing practical machine learning approaches for behavior recognition and fall detection.",
     solution:
-      "futureproof provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor evaluation for IoT components, and implementation planning for their AI analytics pipeline.",
+      "futureproof provided structured guidance on selecting appropriate technologies for Knowspace's data pipeline, including MQTT brokers, stream processing frameworks, and indoor positioning algorithms. We helped them evaluate hardware options, optimize their system architecture, and implement practical machine learning approaches for behavior recognition and fall detection. Our advisory services included technical architecture reviews, vendor selection for IoT components, and implementation planning for their AI analytics pipeline.",
     results: [
       "Accelerated development timeline by avoiding costly experimentation with inappropriate technologies",
       "Reduced EMQX deployment complexity by 50% and costs by 90%",
@@ -68,7 +68,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         "futureproof took a complicated technical problem and crafted a layperson's solution.  They are the only technical team we've worked with that was able to truly listen and understand the nature of our business, along with the technical ability to develop an off the shelf solution.  And it didn't require a steep learning curve for my team or our customers to implement.",
       author: "Jack Burden, Founder and CEO, Knowspace",
     },
-    services: ["Opportunity Assessment", "Vendor Evaluation", "Implementation Roadmap", "Pilot Execution"],
+    services: ["Opportunity Assessment", "Vendor Selection", "Implementation Roadmap", "Pilot Execution"],
     technologies: [
       "BLE (Bluetooth Low Energy)",
       "MQTT (Message Queuing Telemetry Transport)",

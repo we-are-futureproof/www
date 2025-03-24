@@ -34,8 +34,8 @@ const services = {
       "Enhanced budget efficiency by establishing clear decision criteria for technology investments.",
     ],
   },
-  "ai-vendor-evaluation": {
-    title: "AI Vendor Evaluation",
+  "ai-vendor-selection": {
+    title: "AI Vendor Selection",
     description:
       "Systematic approach for evaluating AI vendors against customized criteria that reflect actual business requirements rather than trending technologies.",
     benefits: [

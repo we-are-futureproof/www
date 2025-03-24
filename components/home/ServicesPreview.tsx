@@ -30,10 +30,10 @@ const SERVICE_ITEMS: ServiceItem[] = [
     link: "/services/ai-implementation-roadmap",
   },
   {
-    title: "Evaluation",
+    title: "Selection",
     description:
       "Evaluate AI vendors against customized criteria that reflect actual business requirements rather than trending technologies.",
-    link: "/services/ai-vendor-evaluation",
+    link: "/services/ai-vendor-selection",
   },
   {
     title: "Pilot",

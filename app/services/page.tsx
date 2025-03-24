@@ -48,8 +48,8 @@ export default function ServicesPage() {
       link: "/services/ai-implementation-roadmap",
     },
     {
-      id: "ai-vendor-evaluation",
-      title: "Evaluation",
+      id: "ai-vendor-selection",
+      title: "Selection",
       description:
         "Systematic approach for evaluating AI vendors against customized criteria that reflect actual business requirements rather than trending technologies.",
       benefits: [
@@ -57,7 +57,7 @@ export default function ServicesPage() {
         "Accelerated implementation timelines through early identification of integration requirements.",
         "Stronger negotiating position with vendors through detailed understanding of feature relevance.",
       ],
-      link: "/services/ai-vendor-evaluation",
+      link: "/services/ai-vendor-selection",
     },
     {
       id: "phased-ai-pilot-execution",
@@ -100,7 +100,7 @@ export default function ServicesPage() {
               <span className="font-sans font-bold tracking-wide text-gray-800">for AI Transformation</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 md:mb-14 max-w-2xl">
-              We offer a comprehensive suite of <span className='bg-green-200'>AI advisory services</span> designed specifically for small and medium
+              We offer a <span className='bg-green-200'>comprehensive suite of AI advisory services</span> designed specifically for small and medium
               businesses. Each service is tailored to address specific challenges in the AI adoption journey.
             </p>
           </div>
