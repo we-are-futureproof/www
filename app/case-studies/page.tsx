@@ -48,10 +48,10 @@ export default function CaseStudiesPage() {
                       <h2 className="text-3xl font-bold mb-4">{caseStudy.title}</h2>
                       {Array.isArray(caseStudy.description) ? (
                         caseStudy.description.map((paragraph, i) => (
-                          <p key={i} className="text-sm md:text-lg mb-6">{paragraph}</p>
+                          <p key={i} className="text-lg md:text-lg mb-6 font-sans">{paragraph}</p>
                         ))
                       ) : (
-                        <p className="text-sm md:text-lg mb-6">{caseStudy.description}</p>
+                        <p className="text-lg md:text-lg mb-6 font-sans">{caseStudy.description}</p>
                       )}
 
                       <h3 className="text-xl font-bold mb-3">RESULTS</h3>

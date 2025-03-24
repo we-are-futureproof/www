@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           <div className="col-span-2 md:col-span-1 mb-4 md:mb-0">
-            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">We are futureproof</h3>
-            <p className="mb-3 md:mb-4 text-sm md:text-base">And you should be too</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">we are futureproof</h3>
+            <p className="mb-3 md:mb-4 text-sm md:text-base">and you should be too</p>
             <p className="text-sm md:text-base mt-10 py-3 border-y border-white/50 border-y-[0.5px]">AI strategy for business performance.</p>
           </div>
           <div>
@@ -49,7 +49,7 @@ export default function Footer() {
             <h4 className="font-bold mb-3 md:mb-4 text-base md:text-base">CASE STUDIES</h4>
             <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
               <li>
-                <Link href="/case-studies" className="hover:underline inline-block py-0.5">
+                <Link href="/case-studies" className="hover:underline inline-block py-0.5 mb-2">
                   All Case Studies
                 </Link>
               </li>

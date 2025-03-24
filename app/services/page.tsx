@@ -129,7 +129,7 @@ export default function ServicesPage() {
                 
                 {/* Row 2: Description - fixed height */}
                 <div className="min-h-[120px] md:min-h-[140px]">
-                  <p>{service.description}</p>
+                  <p className="font-sans">{service.description}</p>
                 </div>
                 
                 {/* Row 3: Benefits - grows to fill remaining space */}
