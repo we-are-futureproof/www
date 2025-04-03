@@ -2,11 +2,13 @@
 
 import { use } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import Footer from "../../../components/Footer"
 import Header from "../../../components/Header"
 import CTASection from "../../../components/CTASection"
+import { services as serviceItems } from "../../../lib/data/services"
 
 interface ServicePageProps {
   params: Promise<{
@@ -14,7 +16,7 @@ interface ServicePageProps {
   }>
 }
 export default function ServicePage({ params }: ServicePageProps) {
-
+  // Service data definitions
   const services = {
     "ai-opportunity-assessment": {
       title: "AI Opportunity Assessment",
@@ -154,6 +156,10 @@ export default function ServicePage({ params }: ServicePageProps) {
   // Unwrap params using React.use()
   const resolvedParams = use(params)
   const slug = resolvedParams.slug
+  
+  // Find the short description and icon from the services data
+  const serviceData = serviceItems.find(s => s.id === slug)
+  
   const service = services[slug as keyof typeof services]
 
   if (!service) {
@@ -189,7 +195,22 @@ export default function ServicePage({ params }: ServicePageProps) {
             <ArrowLeft className="mr-2 h-4 w-4" /> BACK TO SERVICES
           </Link>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-8">{service.title}</h1>
+          {/* Service Title with Icon and Short Description */}
+          <div className="flex items-start mb-8">
+            {serviceData && (
+              <div className="mr-6">
+                {serviceData.icon()}
+              </div>
+            )}
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">{service.title}</h1>
+              {serviceData && (
+                <p className="text-xl font-bold mb-6 border-l-4 border-black pl-4 py-2">
+                  {serviceData.description}
+                </p>
+              )}
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="md:col-span-2">
