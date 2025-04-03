@@ -14,11 +14,11 @@ interface ServicesMegaMenuProps {
   onMouseLeave?: () => void;
 }
 
-export default function ServicesMegaMenu({ 
-  isVisible, 
+export default function ServicesMegaMenu({
+  isVisible,
   onClose,
   onMouseEnter,
-  onMouseLeave 
+  onMouseLeave
 }: ServicesMegaMenuProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -28,66 +28,46 @@ export default function ServicesMegaMenu({
   }, []);
 
   if (!isVisible || !mounted) return null;
-  
+
   return createPortal(
-    <div 
+    <div
       className="fixed top-[72px] left-0 right-0 w-full bg-gray-200 border-b border-black z-50 shadow-lg services-mega-menu"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <div className="container mx-auto px-4 py-8">
-        <div className="flex gap-6">
-          {/* Left column (stages 1-3) */}
-          <div className="flex-1 flex flex-col gap-6">
-            {services.slice(0, 3).map((service) => (
-              <Link 
-                href={service.link} 
-                key={service.id}
-                className="border border-black p-6 hover:shadow-md group transition-all duration-200 bg-white block"
-                onClick={onClose}
-                onMouseEnter={handleColorHoverEffect.onMouseEnter}
-                onMouseLeave={handleColorHoverEffect.onMouseLeave}
-              >
-                <div className="flex">
-                  <div className="text-black mr-6 flex-shrink-0">
+        {/* Responsive grid layout - 2 columns for md, 3 columns for lg+ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          {/* All services displayed in a responsive grid */}
+          {services.map((service) => (
+            <Link
+              href={service.link}
+              key={service.id}
+              className="border border-black py-4 px-3 md:p-5 lg:p-6 lg:pl-4 hover:shadow-md group transition-all duration-200 bg-white block"
+              onClick={onClose}
+              onMouseEnter={handleColorHoverEffect.onMouseEnter}
+              onMouseLeave={handleColorHoverEffect.onMouseLeave}
+            >
+              <div className="flex items-start">
+                {/* Responsive icon sizing - much smaller on mobile/tablet */}
+                <div className="text-black mr-2 md:mr-3 lg:mr-4 flex-shrink-0 pt-1">
+                  {/* Significantly reduce icon size on smaller screens */}
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 relative">
                     {service.icon()}
                   </div>
-                  <div className="flex flex-col">
-                    <div className="text-xl flex items-center mb-2">
-                      <span className="text-gray-500 mr-2">Stage {service.stage} -</span> {service.title} <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                    <p className="text-lg font-sans">{service.description}</p>
-                  </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-          
-          {/* Right column (stages 4-6) */}
-          <div className="flex-1 flex flex-col gap-6">
-            {services.slice(3, 6).map((service) => (
-              <Link 
-                href={service.link} 
-                key={service.id}
-                className="border border-black p-6 hover:shadow-md group transition-all duration-200 bg-white block"
-                onClick={onClose}
-                onMouseEnter={handleColorHoverEffect.onMouseEnter}
-                onMouseLeave={handleColorHoverEffect.onMouseLeave}
-              >
-                <div className="flex">
-                  <div className="text-black mr-6 flex-shrink-0">
-                    {service.icon()}
+                <div className="flex flex-col overflow-hidden w-full">
+                  <div className="flex items-center mb-1 md:mb-2 whitespace-nowrap">
+                    <span className="text-gray-500 mr-1 text-xs sm:text-sm md:text-base">STAGE {service.stage} -</span>
+                    <span className="text-xs sm:text-sm md:text-base lg:text-lg mr-1">{service.title}</span>
+                    <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 flex-shrink-0" />
                   </div>
-                  <div className="flex flex-col">
-                    <div className="text-xl flex items-center mb-2">
-                      <span className="text-gray-500 mr-2">Stage {service.stage} -</span> {service.title} <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                    <p className="text-lg font-sans">{service.description}</p>
-                  </div>
+                  {/* Show description with appropriate sizing */}
+                  <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-sans truncate">{service.description}</p>
                 </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>,

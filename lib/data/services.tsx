@@ -63,7 +63,7 @@ export const services: Service[] = [
   {
     id: "ai-vendor-selection",
     title: "Selection",
-    description: "Choose the Best AI Partners for Your Business",
+    description: "Choose the Best AI Partners for You",
     stage: 4,
     icon: () => (
       <Image 
@@ -93,7 +93,7 @@ export const services: Service[] = [
   {
     id: "ai-impact-assessment",
     title: "Impact",
-    description: "Maximize the Value of Your AI Investment",
+    description: "Maximize the Value of Your Investment",
     stage: 6,
     icon: () => (
       <Image 
