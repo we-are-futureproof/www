@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Footer from "../components/Footer"
-import { getQuotesBySection } from "../lib/quotes"
+// Import removed: getQuotesBySection no longer needed for hero section
 
 // Import homepage section components
 import Header from "../components/Header"
@@ -14,8 +14,7 @@ import CaseStudyPreview from "../components/home/CaseStudyPreview"
 import CTASection from "../components/CTASection"
 
 export default function HomePage() {
-  // Get hero quotes
-  const heroQuotes = getQuotesBySection('hero')
+  // Hero quotes no longer needed for client logo carousel
   
   // Shared hovered item state for Problem and Solution sections
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
@@ -26,7 +25,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <HeroSection heroQuotes={heroQuotes} />
+      <HeroSection />
 
       {/* Problem and Solution Section */}
       <section className="border-b border-black bg-gray-100 min-h-[750px]">

@@ -3,15 +3,13 @@
 import { ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import Button from "../Button"
-import TestimonialCarousel from "../TestimonialCarousel"
+import ClientLogoCarousel from "../ClientLogoCarousel"
 import { Quote } from "../../lib/quotes"
 import { heroHooks, HeroHook } from '@/lib/data/hero-hooks';
 
-interface HeroSectionProps {
-  heroQuotes: Quote[]
-}
+interface HeroSectionProps {}
 
-export default function HeroSection({ heroQuotes }: HeroSectionProps) {
+export default function HeroSection({}: HeroSectionProps) {
   const [showImage, setShowImage] = useState(true)
   const [mobileTeaserText, setMobileTeaserText] = useState<HeroHook | null>(null);
   const [trackingId, setTrackingId] = useState<string | null>(null);
@@ -76,18 +74,18 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               <ArrowRight className="ml-2" />
             </Button>
             <p className="mt-4 xl:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
-              <span className="hidden md:inline"> • </span><strong>28 years</strong> building automation solutions
+              <span className="hidden md:inline"> • </span><strong>28 years</strong> building solutions that solve business problems
               <br className="hidden md:block" /><span className="inline"> • </span>
-              <strong>80+ enterprise clients</strong> including six of the Fortune 100
+              <strong>80+ commercial clients</strong> including six of the Fortune 100
               <br className="hidden md:block" /><span className="inline"> • </span>
-              <strong>4 Small / Medium Businesses (SMBs)</strong> achieved implementation within 3 weeks
+              <strong>Small and Medium Businesses (SMBs)</strong> see impact within days
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 py-2 sm:py-3 md:py-4 pl-0 sm:pl-2">
               AI is already transforming your industry. <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>It's time to take advantage of this disruption.
             </p>
           </div>
-          <div className="w-full xl:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-400 overflow-hidden relative mt-4 md:mt-0">
+          <div className="w-full xl:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-300 rounded-xl overflow-hidden relative mt-4 md:mt-0">
             {/* Hero testimonial section */}
             <div className="w-full h-full relative">
               <div 
@@ -102,7 +100,7 @@ export default function HeroSection({ heroQuotes }: HeroSectionProps) {
               <div 
                 className={`absolute inset-0 transition-opacity duration-1000 ${showImage ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               >
-                <TestimonialCarousel quotes={heroQuotes} />
+                <ClientLogoCarousel />
               </div>
             </div>
           </div>
