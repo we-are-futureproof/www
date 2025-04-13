@@ -13,6 +13,7 @@ export default function CaseStudiesPage() {
 
   // Get case studies from our centralized data store
   const caseStudies = getAllCaseStudyPreviews()
+  // alert(caseStudies[0].title)
 
   return (
     <div className="min-h-screen bg-white text-black font-mono">
@@ -46,6 +47,7 @@ export default function CaseStudiesPage() {
                   <div className="p-8 md:p-12 flex flex-col justify-between">
                     <div>
                       <h2 className="text-3xl font-bold mb-4">{caseStudy.title}</h2>
+                      {caseStudy.subtitle && <h3 className="text-xl font-bold mb-4">{caseStudy.subtitle}</h3>}
                       {Array.isArray(caseStudy.description) ? (
                         caseStudy.description.map((paragraph, i) => (
                           <p key={i} className="text-lg md:text-lg mb-6 font-sans">{paragraph}</p>
