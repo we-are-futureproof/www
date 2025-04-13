@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Linkedin, Youtube, Twitter } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -9,6 +10,35 @@ export default function Footer() {
             <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">we are futureproof</h3>
             <p className="mb-3 md:mb-4 text-sm md:text-base">and you should be too</p>
             <p className="text-sm md:text-base mt-10 py-3 border-y border-white/50 border-y-[0.5px]">AI strategy for business performance.</p>
+            <div className="flex items-center space-x-4 mt-12">
+              <a
+                href="https://www.linkedin.com/in/sherifabushadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.youtube.com/@we-are-futureproof"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+              <a
+                href="https://x.com/amgando"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+                aria-label="Twitter/X"
+              >
+                <Twitter size={20} />
+              </a>
+            </div>
           </div>
           <div>
             <h4 className="font-bold mb-3 md:mb-4 text-base md:text-base">SERVICES</h4>
@@ -54,13 +84,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies/knowspace" className="hover:underline inline-block py-0.5">
-                  Knowspace
+                <Link href="/case-studies/peak-sensor-systems" className="hover:underline inline-block py-0.5">
+                  PEAK Sensor Systems
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies/peak-sensor-systems" className="hover:underline inline-block py-0.5">
-                  PEAK Sensor Systems
+                <Link href="/case-studies/johnreid" className="hover:underline inline-block py-0.5">
+                  John Reid Companies
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies/knowspace" className="hover:underline inline-block py-0.5">
+                  Knowspace
                 </Link>
               </li>
             </ul>
