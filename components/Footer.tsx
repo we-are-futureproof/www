@@ -1,7 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import { Linkedin, Youtube, Twitter } from "lucide-react"
+import { usePostHog } from "posthog-js/react"
 
 export default function Footer() {
+  const posthog = usePostHog()
   return (
     <footer className="border-b border-black bg-black text-white">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -17,6 +21,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white/80 transition-colors"
                 aria-label="LinkedIn"
+                onClick={() => posthog.capture("social_link_click", { platform: "linkedin" })}
               >
                 <Linkedin size={20} />
               </a>
@@ -26,6 +31,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white/80 transition-colors"
                 aria-label="YouTube"
+                onClick={() => posthog.capture("social_link_click", { platform: "youtube" })}
               >
                 <Youtube size={20} />
               </a>
@@ -35,6 +41,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white/80 transition-colors"
                 aria-label="Twitter/X"
+                onClick={() => posthog.capture("social_link_click", { platform: "twitter" })}
               >
                 <Twitter size={20} />
               </a>

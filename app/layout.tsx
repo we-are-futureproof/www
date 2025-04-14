@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Space_Mono, Inter } from "next/font/google"
 import { siteConfig, defaultOpenGraph, defaultTwitter } from "../lib/seo-config"
+import { PostHogProvider } from "../components/PostHogProvider"
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -54,7 +55,11 @@ export default function RootLayout({
       <head>
         <meta property="og:logo" content={siteConfig.ogImage} key="og-logo" />
       </head>
-      <body className={`${spaceMono.variable} ${inter.variable} font-mono`}>{children}</body>
+      <body className={`${spaceMono.variable} ${inter.variable} font-mono`}>
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
+      </body>
     </html>
   )
 }

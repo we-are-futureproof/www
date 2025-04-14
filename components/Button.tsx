@@ -1,6 +1,9 @@
+"use client"
+
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import { cn } from "../lib/utils";
+import { usePostHog } from "posthog-js/react";
 
 type ButtonVariant = "primary" | "secondary";
 type ButtonSize = "default" | "large";
@@ -14,6 +17,7 @@ interface ButtonProps {
   onClick?: () => void;
   ariaLabel?: string;
   fullWidth?: boolean;
+  trackingName?: string;
 }
 
 export default function Button({
@@ -25,7 +29,9 @@ export default function Button({
   onClick,
   ariaLabel,
   fullWidth = false,
+  trackingName,
 }: ButtonProps) {
+  const posthog = usePostHog();
   // Define base styles common to all buttons
   const baseStyles = "inline-flex items-center border border-black font-bold transition-colors";
 
@@ -57,11 +63,26 @@ export default function Button({
 
   // If an href is provided, render as a Link
   if (href) {
+    // Detect if this is a strategy call booking link
+    const isStrategyCall = href.includes("cal.com") && href.includes("strategy-call");
+
+    // Create tracking handler
+    const handleClick = () => {
+      if (trackingName) {
+        posthog.capture("button_click", { name: trackingName, href });
+      } else if (isStrategyCall) {
+        posthog.capture("book_strategy_call_click", { href });
+      } else {
+        posthog.capture("button_click", { href, text: typeof children === 'string' ? children : 'Button' });
+      }
+    };
+
     return (
-      <Link 
-        href={href} 
+      <Link
+        href={href}
         className={buttonStyles}
         aria-label={ariaLabel}
+        onClick={handleClick}
       >
         {children}
       </Link>
@@ -70,9 +91,19 @@ export default function Button({
 
   // Otherwise render as a button
   return (
-    <button 
-      className={buttonStyles} 
-      onClick={onClick}
+    <button
+      className={buttonStyles}
+      onClick={(e) => {
+        // Track the button click
+        if (trackingName) {
+          posthog.capture("button_click", { name: trackingName });
+        } else {
+          posthog.capture("button_click", { text: typeof children === 'string' ? children : 'Button' });
+        }
+
+        // Call the original onClick handler if provided
+        if (onClick) onClick();
+      }}
       aria-label={ariaLabel}
     >
       {children}
