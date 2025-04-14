@@ -11,6 +11,7 @@ import Footer from "../../../components/Footer"
 import Header from "../../../components/Header"
 import CTASection from "../../../components/CTASection"
 import { getCaseStudy } from "@/lib/data/case-studies"
+import { usePostHog } from "posthog-js/react"
 
 interface CaseStudyPageProps {
   params: Promise<{
@@ -19,11 +20,13 @@ interface CaseStudyPageProps {
 }
 
 export default function CaseStudyPage({ params }: CaseStudyPageProps) {
+  const posthog = usePostHog();
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
     alt: string;
     type: 'image' | 'video' | 'gif';
+    description?: string;
   } | null>(null);
 
   // Unwrap params using React.use()
@@ -40,6 +43,25 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   // Handler for closing the modal
   const handleCloseModal = () => {
     setSelectedImage(null);
+  };
+
+  // Handler for tracking image expansion
+  const handleImageExpand = (image: {
+    src: string;
+    alt: string;
+    type: 'image' | 'video' | 'gif';
+    description?: string;
+  }) => {
+    // Track image expansion with PostHog
+    posthog.capture("case_study_image_expanded", {
+      image_name: image.description || 'Unnamed Image',
+      image_alt: image.alt,
+      image_type: image.type,
+      case_study: slug
+    });
+
+    // Set the selected image
+    setSelectedImage(image);
   };
 
   return (
@@ -90,7 +112,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
             )}
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="md:col-span-2">
 
@@ -122,7 +144,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               {caseStudy.testimonial && (
                 <div className="border-l-4 border-black pl-6 py-4 mb-8 bg-gray-100">
                   <div className="text-xl italic mb-4 prose prose-xl prose-neutral max-w-none">
-                    <ReactMarkdown 
+                    <ReactMarkdown
                       remarkPlugins={[remarkGfm]}
                       components={{
                         p: ({node, ...props}) => <p className="mb-2">"{props.children}"</p>
@@ -226,8 +248,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   <div className="p-6 bg-gray-100 border-b border-black flex justify-between items-center">
                     <p className="font-mono text-lg">{image.description || 'Image ' + (index + 1)}</p>
                     <button
-                      className="p-2 hover:bg-gray-200 rounded-sm transition-colors" 
-                      onClick={() => setSelectedImage(image)}
+                      className="p-2 hover:bg-gray-200 rounded-sm transition-colors"
+                      onClick={() => handleImageExpand(image)}
                       aria-label="Expand image"
                     >
                       <Maximize2 size={20} />
@@ -235,7 +257,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   </div>
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setSelectedImage(image)}
+                    onClick={() => handleImageExpand(image)}
                   >
                     {image.type === 'gif' ? (
                       <div className="relative h-[500px] w-full">
