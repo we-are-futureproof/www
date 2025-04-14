@@ -300,15 +300,25 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
           onClick={handleCloseModal}
         >
-          <div className="absolute top-4 right-4">
-            <button
-              className="bg-white p-2 rounded-full"
-              onClick={handleCloseModal}
-              aria-label="Close modal"
-            >
-              <X size={24} />
-            </button>
-          </div>
+          <div className="absolute top-4 right-4 z-60 pointer-events-auto">
+  <button
+  className="bg-white p-2 rounded-full"
+  onClick={(e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    handleCloseModal();
+  }}
+  onTouchEnd={(e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    handleCloseModal();
+  }}
+  aria-label="Close modal"
+  style={{ zIndex: 60 }}
+>
+  <X size={24} />
+</button>
+</div>
 
           <div
             className="max-w-6xl max-h-[90vh] w-full"
