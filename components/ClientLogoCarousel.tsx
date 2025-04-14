@@ -165,36 +165,25 @@ const ClientLogoCarousel: React.FC<ClientLogoCarouselProps> = ({
 
       {/* Logo slides container - improved touch behavior */}
       <div
-        ref={scrollContainerRef}
-        className="flex overflow-x-hidden snap-x snap-mandatory w-full h-full touch-pan-x"
+        className="w-full h-full"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => {
-          // Resume auto-scroll after a delay when touch ends
-          setTimeout(() => setIsPaused(false), 5000);
-        }}
       >
-        {slides.map((slideLogos, index) => (
-          <div
-            key={index}
-            className="flex-none w-full h-full snap-center flex flex-col justify-center"
-          >
-            <div className="bg-white border border-gray-50 m-0 p-0 rounded-sm shadow-sm h-full flex flex-col justify-center">
-              <div className="grid grid-cols-2 h-full w-full">
-                {slideLogos.map((logo, logoIndex) => (
-                  <div key={logoIndex} className="flex items-center justify-center h-full">
-                    <img
-                      src={logo}
-                      alt={`Client logo ${logoIndex + 1}`}
-                      className="h-[150px] sm:h-[200px] md:h-[250px] w-auto max-w-full p-2 object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
+        <div className="flex-none w-full h-full flex flex-col justify-center">
+          <div className="bg-white border border-gray-50 m-0 p-0 rounded-sm shadow-sm h-full flex flex-col justify-center">
+            <div className="grid grid-cols-2 h-full w-full">
+              {slides[activeIndex].map((logo, logoIndex) => (
+                <div key={logoIndex} className="flex items-center justify-center h-full">
+                  <img
+                    src={logo}
+                    alt={`Client logo ${logoIndex + 1}`}
+                    className="h-[150px] sm:h-[200px] md:h-[250px] w-auto max-w-full p-2 object-contain"
+                  />
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
