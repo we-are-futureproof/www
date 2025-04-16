@@ -15,7 +15,7 @@ export default function CTASection() {
             No sales pitch. No vendor lock-in. Just practical, actionable advice from experienced professionals.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Button href="https://cal.com/amgando/free-strategy-call" variant="primary" size="large">
+            <Button href="https://cal.com/we-are-futureproof/free-discovery-call" variant="primary" size="large">
               BOOK A STRATEGY CALL <ArrowRight className="ml-2" />
             </Button>
             <Button href="/services" variant="secondary" size="large">
