@@ -32,8 +32,8 @@ export default function HeroSection({}: HeroSectionProps) {
 
   // Construct Cal.com booking URL with optional tracking parameter
   const calComBookingUrl = mobileTeaserText 
-    ? `https://cal.com/amgando/free-strategy-call${window.innerWidth < 768 ? `?t=${trackingId}` : '?t=www'}` 
-    : 'https://cal.com/amgando/free-strategy-call?t=www';
+    ? `https://cal.com/we-are-futureproof/free-discovery-call${window.innerWidth < 768 ? `?t=${trackingId}` : '?t=www'}` 
+    : 'https://cal.com/we-are-futureproof/free-discovery-call?t=www';
 
   return (
     <section className="border-b border-black">
