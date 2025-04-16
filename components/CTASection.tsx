@@ -16,7 +16,7 @@ export default function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <Button href="https://cal.com/we-are-futureproof/free-discovery-call" variant="primary" size="large">
-              BOOK A STRATEGY CALL <ArrowRight className="ml-2" />
+              BOOK A DISCOVERY CALL <ArrowRight className="ml-2" />
             </Button>
             <Button href="/services" variant="secondary" size="large">
               EXPLORE OUR SERVICES <ArrowRight className="ml-2" />

@@ -63,15 +63,15 @@ export default function Button({
 
   // If an href is provided, render as a Link
   if (href) {
-    // Detect if this is a strategy call booking link
-    const isStrategyCall = href.includes("cal.com") && href.includes("strategy-call");
+    // Detect if this is a discovery call booking link
+    const isDiscoveryCall = href.includes("cal.com") && href.includes("discovery-call");
 
     // Create tracking handler
     const handleClick = () => {
       if (trackingName) {
         posthog.capture("button_click", { name: trackingName, href });
-      } else if (isStrategyCall) {
-        posthog.capture("book_strategy_call_click", { href });
+      } else if (isDiscoveryCall) {
+        posthog.capture("book_discovery_call_click", { href });
       } else {
         posthog.capture("button_click", { href, text: typeof children === 'string' ? children : 'Button' });
       }

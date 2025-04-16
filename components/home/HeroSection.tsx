@@ -31,8 +31,8 @@ export default function HeroSection({}: HeroSectionProps) {
   }, []);
 
   // Construct Cal.com booking URL with optional tracking parameter
-  const calComBookingUrl = mobileTeaserText 
-    ? `https://cal.com/we-are-futureproof/free-discovery-call${window.innerWidth < 768 ? `?t=${trackingId}` : '?t=www'}` 
+  const calComBookingUrl = mobileTeaserText
+    ? `https://cal.com/we-are-futureproof/free-discovery-call${window.innerWidth < 768 ? `?t=${trackingId}` : '?t=www'}`
     : 'https://cal.com/we-are-futureproof/free-discovery-call?t=www';
 
   return (
@@ -70,7 +70,7 @@ export default function HeroSection({}: HeroSectionProps) {
               fullWidth={true}
               className="rounded-md sm:w-auto sm:justify-start"
             >
-              BOOK A <span className="hidden md:inline">&nbsp;(free)&nbsp;</span>STRATEGY CALL
+              BOOK A <span className="hidden md:inline">&nbsp;(free)&nbsp;</span>DISCOVERY CALL
               <ArrowRight className="ml-2" />
             </Button>
             <p className="mt-4 xl:mt-6 text-base sm:text-lg md:text-xl text-gray-700 py-4 sm:py-6 md:py-8 pl-0 sm:pl-2">
@@ -88,7 +88,7 @@ export default function HeroSection({}: HeroSectionProps) {
           <div className="w-full xl:w-2/5 h-[400px] md:h-[450px] lg:h-[530px] border border-gray-300 rounded-xl overflow-hidden relative mt-4 md:mt-0">
             {/* Hero testimonial section */}
             <div className="w-full h-full relative">
-              <div 
+              <div
                 className={`absolute inset-0 z-10 transition-opacity duration-1000 bg-white flex items-center justify-center ${showImage ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
               >
                 <img
@@ -97,7 +97,7 @@ export default function HeroSection({}: HeroSectionProps) {
                   className="w-full h-full object-contain bg-white p-4 sm:p-6 md:p-8 pt-2 sm:pt-3 md:pt-4"
                 />
               </div>
-              <div 
+              <div
                 className={`absolute inset-0 transition-opacity duration-1000 ${showImage ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               >
                 <ClientLogoCarousel />
