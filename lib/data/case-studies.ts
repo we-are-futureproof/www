@@ -90,7 +90,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     technologies: [
       "BLE (Bluetooth Low Energy)",
       "MQTT (Message Queuing Telemetry Transport)",
-      "Kafka (Stream Processing)",
+      "Kafka (Stream Processing) using Quix.io",
       "Data Cleaning and Device Positioning"
     ],
     image: {
@@ -200,7 +200,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         src: "/projects/knowspace/quix.png",
         alt: "Knowspace Quix integration",
-        description: "Stream processing implementation for real-time data analysis",
+        description: "Stream processing pipeline using Quix.io for real-time data analysis",
         type: "image",
         sort: 13
       }
