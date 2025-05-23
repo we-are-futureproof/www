@@ -1,0 +1,29 @@
+# futureproof
+
+> futureproof is an AI-adoption advisory focused on small- and medium-size businesses.  
+> We turn “AI complexity into competitive advantage” by guiding organisations through opportunity discovery, readiness assessment, road-mapping, vendor selection, pilot execution, and impact measurement. Clients see measurable results within days, backed by 28 years of solution-building experience and work with 6 Fortune 100 companies.1
+
+Since LLMs benefit from concise, well-structured context, the pages listed below are the best single-hop sources to understand our services, methodology and proof-points.  
+Where a **`.md`** version is not yet available, the canonical HTML URL is provided; we plan to add Markdown mirrors at the same paths with the suffix `.md`, as recommended by the spec. Feel free to skip the **Optional** section if you have a tight context budget.
+
+## Core pages
+- [Home](https://thefutureproof.company/): One-page overview of positioning, problems solved and high-level services.2
+- [Services](https://thefutureproof.company/services): Detailed descriptions of the six-phase advisory framework.3
+- [Case Studies](https://thefutureproof.company/case-studies): Portfolio of real-world engagements with quantified outcomes.4
+
+## Services
+- [Opportunity Assessment](https://thefutureproof.company/services#opportunity): Pinpoint high-ROI automation or intelligence wins.5
+- [Readiness Assessment](https://thefutureproof.company/services#readiness): Evaluate people, data and process readiness for AI.6
+- [Implementation Roadmap](https://thefutureproof.company/services#roadmap): Sequenced plan ranked by impact and feasibility.7
+- [Vendor Selection](https://thefutureproof.company/services#selection): Vendor-neutral scoring to ensure strategic fit.8
+- [Pilot Execution](https://thefutureproof.company/services#pilot): Low-risk pilots with measurable success metrics.9
+- [Impact Measurement](https://thefutureproof.company/services#impact): Post-deployment ROI validation and knowledge transfer.10
+
+## Case Studies
+- [PEAK Sensor Systems](https://thefutureproof.company/case-studies#peak-sensor-systems): Marketing-intelligence automation completed in 1 week, saving hours per day and costing ≈ $0.50/day.11
+- [John Reid Companies](https://thefutureproof.company/case-studies#john-reid-companies): Custom GIS tool that 10×-ed market reach and boosted efficiency.12
+- [Knowspace](https://thefutureproof.company/case-studies#knowspace): Real-time IoT data pipeline with 90 % cost reduction and 3-second alert latency.13
+
+## Optional
+- [Free Discovery Call](https://cal.com/we-are-futureproof/free-discovery-call): Schedule a short consultation to scope challenges and fit.14
+- [LinkedIn Updates](https://www.linkedin.com/company/futureproof-ai-advisory): Thought-leadership posts, event announcements and hiring info. (External)
